@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+@theme {
+
+    --breakpoint-lg-tablet: 61.938rem;
+}

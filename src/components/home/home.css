@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-lg-tablet: 61.938rem;
+}
+
+
+/* Social Icon Animation */
+.flip a {
+    width: 60px;
+    height: 60px;
+    color: #22303F;
+    border-radius: 50%;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    line-height: 62px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.flip a .icon {
+    transition: 0.5s;
+    position: relative;
+    z-index: 2;
+}
+
+.flip a:hover .icon {
+    transform: rotateY(180deg);
+}
+
+a:nth-child(1):hover {
+    transition: 0.10s;
+}
+
+a:nth-child(2):hover {
+    transition: 0.10s;
+}
+
+a:nth-child(3):hover {
+    transition: 0.10s;
+}
+
+a:nth-child(4):hover {
+    transition: 0.10s;
+}

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+@theme {
+
+    --breakpoint-lg-tablet: 61.938rem;
+}
+
+marquee {
+    width: 100%;
+    /* Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: marquee 5s linear infinite;
+    /* Adjust duration as needed */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

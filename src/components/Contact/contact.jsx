@@ -46,7 +46,7 @@ export default function Contact() {
     return (
         <>
 
-            <div className="h-screen flex flex-col relative text-center overflow-hidden lg-tablet:text-left  px-4 sm:px-6 lg-tablet:px-10 justify-start pt-15 mx-auto items-center z-0">
+            <div className=" flex flex-col relative text-center overflow-hidden lg-tablet:text-left  px-4 sm:px-6 lg-tablet:px-10 justify-start p-15  items-center z-0">
                 <div className="w-[100%] text-4xl p-2 text-center text-[#E2711E] lg:text-7xl font-bold top-24 uppercase tracking-[4px] lg-tablet:tracking-[14px]">
                     Let's get in Touch!
                 </div>

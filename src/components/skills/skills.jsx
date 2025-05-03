@@ -50,55 +50,90 @@ export default function Skills() {
         { src: css, alt: "css" },
         { src: js, alt: "js" },
         { src: react, alt: "react" },
-        { src: flask, alt: "c" },
-        { src: django, alt: "c" },
-        { src: tailwind, alt: "c" },
-        { src: bootstrap, alt: "c" },
-        { src: nodejs, alt: "c" },
-        { src: mysql, alt: "c" },
-        { src: postgresql, alt: "c" },
-        { src: mongodb, alt: "c" },
-        { src: supabase, alt: "c" },
-        { src: firebase, alt: "c" },
-        { src: docker, alt: "c" },
-        { src: numpy, alt: "c" },
-        { src: matplotlib, alt: "c" },
-        { src: opencv, alt: "c" },
-        { src: pandas, alt: "c" },
-        { src: tensorflow, alt: "c" },
-        { src: scikit, alt: "c" },
-        { src: pytorch, alt: "c" },
-        { src: matlab, alt: "c" },
-        { src: npm, alt: "c" },
-        { src: vercel, alt: "c" },
-        { src: render, alt: "c" },
-        { src: git, alt: "c" },
-        { src: github, alt: "c" },
-        { src: markdown, alt: "c" },
-        { src: vscode, alt: "c" },
-        { src: figma, alt: "c" },
-        { src: colab, alt: "c" },
-        { src: jupyter, alt: "c" },
+        { src: flask, alt: "flask" },
+        { src: django, alt: "django" },
+        { src: tailwind, alt: "tailwind" },
+        { src: bootstrap, alt: "bootstrap" },
+        { src: nodejs, alt: "nodejs" },
+        { src: mysql, alt: "mysql" },
+        { src: postgresql, alt: "postgresql" },
+        { src: mongodb, alt: "mongodb" },
+        { src: supabase, alt: "supabase" },
+        { src: firebase, alt: "firebase" },
+        { src: docker, alt: "docker" },
+        { src: numpy, alt: "numpy" },
+        { src: matplotlib, alt: "matplotlib" },
+        { src: opencv, alt: "opencv" },
+        { src: pandas, alt: "pandas" },
+        { src: tensorflow, alt: "tensorflow" },
+        { src: scikit, alt: "scikit" },
+        { src: pytorch, alt: "pytorch" },
+        { src: matlab, alt: "matlab" },
+        { src: npm, alt: "npm" },
+        { src: vercel, alt: "vercel" },
+        { src: render, alt: "render" },
+        { src: git, alt: "git" },
+        { src: github, alt: "github" },
+        { src: markdown, alt: "markdown" },
+        { src: vscode, alt: "vscode" },
+        { src: figma, alt: "figma" },
+        { src: colab, alt: "colab" },
+        { src: jupyter, alt: "jupyter" },
 
     ];
 
-
+    const duplicatedLogos = [...skillLogos, ...skillLogos];
 
     return (
 
         <>
-            <div className="">
-                <h1 className='text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text'>Skills</h1>
-                <marquee direction="left" className="w-[100%] h-[150px] flex items-center justify-center ">
-                    <div className="flex items-center">
-                        {skillLogos.map((logo, index) => (
-                            <div key={index} className=" cursor-pointer hover:transform hover:scale-140 hover:bg-linear-to-bl from-violet-500 to-fuchsia-500 mx-4 md:mx-8 h-[100px] w-[100px] border border-gray-400 rounded-full flex items-center justify-center">
-                                <img src={logo.src} alt={logo.alt} className="w-[60px] h-[60px]" />
+            <div className="py-12 overflow-hidden">
+                <h1 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                    Skills
+                </h1>
+
+                {/* Infinite scrolling container */}
+                <div className="relative w-full h-36 overflow-hidden">
+                    <div className="flex absolute animate-scroll">
+                        {duplicatedLogos.map((logo, index) => (
+                            <div
+                                key={index}
+                                className="group relative mx-4 md:mx-8 h-24 w-24 border border-gray-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-90"
+                            >
+                                {/* Background fade animation on hover */}
+                                <div className="absolute inset-0 rounded-full  opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+                                <img
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    className="w-14 h-14 z-10 group-hover:text-white"
+                                />
+
+                                {/* Optional: Show skill name on hover */}
+                                <span className="absolute -bottom-7 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">
+                                    {logo.alt}
+                                </span>
                             </div>
                         ))}
                     </div>
-                </marquee>
+                </div>
+
+                {/* CSS for the infinite scroll animation */}
+                <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-scroll {
+          animation: scroll 50s linear infinite;
+        }
+      `}</style>
             </div>
+
 
         </>
 

@@ -3,7 +3,7 @@ import Navbar from "./components/navbar/navbar.jsx";
 import About from "./components/About/About.jsx";
 import Skills from "./components/skills/skills.jsx";
 import Projects from "./components/projects/projects.jsx";
-import Contact from "./components/contact/contact.jsx";
+import Contact from "./components/Contact/contact.jsx";
 import Footer from "./components/Footer/footer.jsx";
 
 function App() {

@@ -5,11 +5,14 @@ import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa"; // Added for resume icon
 
-export default function Home() {
+// Add document head for favicon
+import { Helmet } from "react-helmet";
 
+export default function home() {
   const phrases = [
-    "Hey, I'm Subhro",
+    "Hey, I'm Subhro!",
     "I'm a passionate Web developer with a slight twist!",
     "I'm also interested in Artificial Intelligence and Machine Learning!",
     "Welcome to my portfolio!",
@@ -18,6 +21,7 @@ export default function Home() {
   const [text, setText] = useState('');
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [resumeVisible, setResumeVisible] = useState(false);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
@@ -46,52 +50,107 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, phraseIndex]);
 
+  const toggleResume = () => {
+    setResumeVisible(!resumeVisible);
+  };
 
   return (
     <>
-      <div className="grid grid-cols-1 lg-tablet:grid-cols-2 gap-8 w-[100%] pl-20 pr-20 pt-18">
+      {/* Add favicon */}
+      <Helmet>
+        <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Helmet>
 
-        {/* 1st column */}
-        <div className="flex flex-col justify-center items-start order-2 lg-tablet:order-1 ">
-          <h1 className="text-5xl font-bold">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full p-4 md:p-8 lg:p-19">
+        {/* Image column - changes order on mobile vs desktop */}
+        <div className="flex justify-center items-center w-full order-1 lg:order-2 py-6">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 transform transition-all duration-800 hover:scale-105">
+            <img
+              src={Mine}
+              alt="Subhro's_Profile_Picture"
+              className="rounded-full w-full h-full object-cover shadow-lg border-4 border-orange-400"
+            />
+
+          </div>
+        </div>
+
+        {/* Content column */}
+        <div className="flex flex-col justify-center items-start order-2 lg:order-1 px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-300">
             Hello There! Subhro Here!
           </h1>
-          {/* Adding the typing effect text display here */}
-          <div className="h-16 text-2xl mt-4 text-pink-500 ">
+
+          {/* Typing effect text */}
+          <div className="h-16 md:h-20 text-xl md:text-2xl mt-4 text-gray-600">
             <div className="typing-animation">
               {text}
               <span className="cursor">|</span>
             </div>
           </div>
 
-          <div className="flex flex-row gap-4 pt-4">
-            <button className='w-[150px] h-[60px] border border-gray-400 bg-blue-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group'>
-              <span className="relative z-10 group-hover:text-blue-400 transition-colors duration-300">Work with Me</span>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
+            <button className="w-full sm:w-52 h-14 border border-orange-400 bg-orange-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
+              <span className="relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
+                Work with Me
+              </span>
               <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
 
-            <button className='cursor-pointer font-bold text-blue-500 '>View Resume</button>
-
+            <button
+              onClick={toggleResume}
+              className="w-full sm:w-auto cursor-pointer font-bold text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center justify-center"
+            >
+              <FaFileAlt className="mr-2" /> View Resume
+            </button>
           </div>
-          <div className="social-icons">
-            <div class="flip flex justify-around items-center p-2.5">
-              <a href="#"><FaGithub className='w-[45px] h-[45px] icon' /></a>
-              <a href="#"><TbBrandLinkedinFilled className='w-[46px] h-[46px] icon' /></a>
-              <a href="#"><FaXTwitter className='w-[45px] h-[45px] icon' /></a>
-              <a href="#"><FaInstagram className='w-[46px] h-[46px] icon' /></a>
+
+          {/* Resume modal - shows when resumeVisible is true */}
+          {resumeVisible && (
+            <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+              <div className="bg-white rounded-lg p-6 w-11/12 max-w-4xl h-5/6 flex flex-col">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold">My Resume</h3>
+                  <button
+                    onClick={toggleResume}
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Close
+                  </button>
+                </div>
+                <div className="flex-grow overflow-auto">
+                  {/* Embed resume content here - could be an iframe with PDF viewer or HTML content */}
+                  <iframe
+                    src="/resume.pdf"
+                    className="w-full h-full"
+                    title="Subhro's Resume"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Social icons - made responsive */}
+          <div className="social-icons w-full mt-6">
+            <div className="flip flex justify-start gap-4 items-center">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+                <FaGithub className="w-8 h-8 md:w-10 md:h-10 icon text-gray-700 hover:text-orange-500" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+                <TbBrandLinkedinFilled className="w-8 h-8 md:w-10 md:h-10 icon text-blue-700 hover:text-blue-800" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+                <FaXTwitter className="w-8 h-8 md:w-10 md:h-10 icon text-gray-800 hover:text-gray-900" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+                <FaInstagram className="w-8 h-8 md:w-10 md:h-10 icon text-pink-600 hover:text-pink-700" />
+              </a>
             </div>
           </div>
         </div>
-
-        {/* 2nd column */}
-        <div className="flex justify-center items-center w-[100%] transform transition-all duration-800 hover:scale-105 order-1 lg-tablet:order-2">
-          <img
-            src={Mine}
-            alt="Subhro's_Profile_Picture"
-            className="h-[370px] w-[370px] rounded-full overflow-hidden object-cover"
-          />
-        </div>
-
       </div>
     </>
   );

@@ -6,6 +6,7 @@ import html from "../../assets/image/logos/html.svg";
 import css from "../../assets/image/logos/css.svg";
 import js from "../../assets/image/logos/javascript.svg";
 import react from "../../assets/image/logos/react.webp";
+import vite from "../../assets/image/logos/vite.svg";
 import flask from "../../assets/image/logos/flask.png";
 import django from "../../assets/image/logos/django.svg";
 import tailwind from "../../assets/image/logos/tailwind.png";
@@ -44,41 +45,42 @@ export default function Skills() {
     // Replace these paths with your actual image paths
     const skillLogos = [
         { src: python, alt: "Python" },
-        { src: c, alt: "c" },
-        { src: Cplus, alt: "c++" },
-        { src: html, alt: "html" },
-        { src: css, alt: "css" },
-        { src: js, alt: "js" },
-        { src: react, alt: "react" },
-        { src: flask, alt: "flask" },
-        { src: django, alt: "django" },
-        { src: tailwind, alt: "tailwind" },
-        { src: bootstrap, alt: "bootstrap" },
-        { src: nodejs, alt: "nodejs" },
-        { src: mysql, alt: "mysql" },
-        { src: postgresql, alt: "postgresql" },
-        { src: mongodb, alt: "mongodb" },
-        { src: supabase, alt: "supabase" },
-        { src: firebase, alt: "firebase" },
-        { src: docker, alt: "docker" },
-        { src: numpy, alt: "numpy" },
-        { src: matplotlib, alt: "matplotlib" },
-        { src: opencv, alt: "opencv" },
-        { src: pandas, alt: "pandas" },
-        { src: tensorflow, alt: "tensorflow" },
-        { src: scikit, alt: "scikit" },
-        { src: pytorch, alt: "pytorch" },
-        { src: matlab, alt: "matlab" },
+        { src: c, alt: "C" },
+        { src: Cplus, alt: "C++" },
+        { src: html, alt: "HTML" },
+        { src: css, alt: "CSS" },
+        { src: js, alt: "JavaScript" },
+        { src: react, alt: "React" },
+        { src: vite, alt: "Vite" },
+        { src: flask, alt: "Flask" },
+        { src: django, alt: "Django" },
+        { src: tailwind, alt: "Tailwind" },
+        { src: bootstrap, alt: "Bootstrap" },
+        { src: nodejs, alt: "Nodejs" },
+        { src: mysql, alt: "MySQL" },
+        { src: postgresql, alt: "PostgreSQL" },
+        { src: mongodb, alt: "MongoDB" },
+        { src: supabase, alt: "Supabase" },
+        { src: firebase, alt: "Firebase" },
+        { src: docker, alt: "Docker" },
+        { src: numpy, alt: "Numpy" },
+        { src: matplotlib, alt: "Matplotlib" },
+        { src: opencv, alt: "Opencv" },
+        { src: pandas, alt: "Pandas" },
+        { src: tensorflow, alt: "Tensorflow" },
+        { src: scikit, alt: "Scikit" },
+        { src: pytorch, alt: "Pytorch" },
+        { src: matlab, alt: "Matlab" },
         { src: npm, alt: "npm" },
-        { src: vercel, alt: "vercel" },
-        { src: render, alt: "render" },
-        { src: git, alt: "git" },
-        { src: github, alt: "github" },
-        { src: markdown, alt: "markdown" },
-        { src: vscode, alt: "vscode" },
-        { src: figma, alt: "figma" },
-        { src: colab, alt: "colab" },
-        { src: jupyter, alt: "jupyter" },
+        { src: vercel, alt: "Vercel" },
+        { src: render, alt: "Render" },
+        { src: git, alt: "Git" },
+        { src: github, alt: "Github" },
+        { src: markdown, alt: "Markdown" },
+        { src: vscode, alt: "Vscode" },
+        { src: figma, alt: "Figma" },
+        { src: colab, alt: "Colab" },
+        { src: jupyter, alt: "Jupyter" },
 
     ];
 
@@ -88,7 +90,7 @@ export default function Skills() {
 
         <>
             <div className="py-12 overflow-hidden">
-                <h1 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                <h1 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 via-orange-400 to-red-500 text-transparent bg-clip-text">
                     Skills
                 </h1>
 
@@ -106,11 +108,11 @@ export default function Skills() {
                                 <img
                                     src={logo.src}
                                     alt={logo.alt}
-                                    className="w-14 h-14 z-10 group-hover:text-white"
+                                    className="w-14 h-14 z-10 group-hover:text-orange-500"
                                 />
 
                                 {/* Optional: Show skill name on hover */}
-                                <span className="absolute -bottom-7 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">
+                                <span className=" text-orange-500 absolute -bottom-7 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">
                                     {logo.alt}
                                 </span>
                             </div>

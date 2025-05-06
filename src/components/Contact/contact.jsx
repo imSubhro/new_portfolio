@@ -1,38 +1,8 @@
-import { useState } from "react";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { IoMdMailUnread } from "react-icons/io";
-import { FaMapLocationDot } from "react-icons/fa6";
+
 
 export default function Contact() {
-
-    // const [formData, setFormData] = useState({
-    //     name: "",
-    //     email: "",
-    //     subject: "",
-    //     message: ""
-    // });
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData(prev => ({
-    //         ...prev,
-    //         [name]: value
-    //     }));
-    // };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // Handle form submission logic here
-    //     console.log("Form submitted:", formData);
-    //     // Reset form after submission
-    //     setFormData({
-    //         name: "",
-    //         email: "",
-    //         subject: "",
-    //         message: ""
-    //     });
-    // };
 
 
     const { register, handleSubmit } = useForm();

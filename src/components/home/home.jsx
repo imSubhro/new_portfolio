@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './home.css';
-import Mine from "../../assets/image/mine.png";
+import Mine from "../../assets/image/me.png";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
@@ -67,11 +67,11 @@ export default function home() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full p-4 md:p-8 lg:p-19">
         {/* Image column - changes order on mobile vs desktop */}
         <div className="flex justify-center items-center w-full order-1 lg:order-2 py-6">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 transform transition-all duration-800 hover:scale-105">
+          <div className="relative pl-10 w-64 h-64 md:w-75 md:h-75 lg:w-105 lg:h-105 transform transition-all duration-500 hover:scale-105">
             <img
               src={Mine}
               alt="Subhro's_Profile_Picture"
-              className="rounded-full w-full h-full object-cover shadow-lg border-4 border-orange-400"
+              className=" "
             />
 
           </div>
@@ -93,7 +93,7 @@ export default function home() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-            <button className="w-full sm:w-52 h-14 border border-orange-400 bg-orange-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
+            <button className="w-full sm:w-52 h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
               <span className="relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
                 Work with Me
               </span>
@@ -135,15 +135,15 @@ export default function home() {
 
           {/* Social icons - made responsive */}
           <div className="social-icons w-full mt-6">
-            <div className="flip flex justify-start gap-4 items-center">
+            <div className="flip flex justify-start gap-4 items-center ">
               <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
-                <FaGithub className="w-8 h-8 md:w-10 md:h-10 icon text-gray-700 hover:text-orange-500" />
+                <FaGithub className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-orange-500" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
-                <TbBrandLinkedinFilled className="w-8 h-8 md:w-10 md:h-10 icon text-blue-700 hover:text-blue-800" />
+                <TbBrandLinkedinFilled className="w-8 h-8 md:w-10 md:h-10 icon text-blue-700 hover:text-blue-500" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
-                <FaXTwitter className="w-8 h-8 md:w-10 md:h-10 icon text-gray-800 hover:text-gray-900" />
+                <FaXTwitter className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-blue-500" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
                 <FaInstagram className="w-8 h-8 md:w-10 md:h-10 icon text-pink-600 hover:text-pink-700" />

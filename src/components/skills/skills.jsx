@@ -12,6 +12,7 @@ import django from "../../assets/image/logos/django.svg";
 import tailwind from "../../assets/image/logos/tailwind.png";
 import bootstrap from "../../assets/image/logos/bootstrap.png";
 import nodejs from "../../assets/image/logos/nodejs.svg";
+import next from "../../assets/image/logos/next.webp";
 import mysql from "../../assets/image/logos/mysql.svg";
 import postgresql from "../../assets/image/logos/postgresql.svg";
 import mongodb from "../../assets/image/logos/mongodb.svg";
@@ -56,7 +57,8 @@ export default function Skills() {
         { src: django, alt: "Django" },
         { src: tailwind, alt: "Tailwind" },
         { src: bootstrap, alt: "Bootstrap" },
-        { src: nodejs, alt: "Nodejs" },
+        { src: nodejs, alt: "Node.js" },
+        { src: next, alt: "Next.js" },
         { src: mysql, alt: "MySQL" },
         { src: postgresql, alt: "PostgreSQL" },
         { src: mongodb, alt: "MongoDB" },
@@ -90,17 +92,30 @@ export default function Skills() {
 
         <>
             <div className="py-12 overflow-hidden">
-                <h1 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 via-orange-400 to-red-500 text-transparent bg-clip-text">
-                    Skills
-                </h1>
+
+                <div className="flex justify-center -translate-y-[1px]">
+                    <div className="w-3/4">
+                        <div className="h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
+                    </div>
+                </div>
+                <div className="flex justify-center my-5 lg:py-8">
+                    <div className="flex  items-center">
+                        <span className="w-24 h-[1.5px] bg-orange-400"></span>
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 w-fit text-white p-2 px-5 text-xl rounded-md">
+                            Skills
+                        </span>
+                        <span className="w-24 h-[1.5px] bg-orange-400"></span>
+                    </div>
+                </div>
+
 
                 {/* Infinite scrolling container */}
-                <div className="relative w-full h-36 overflow-hidden">
+                <div className="relative w-full h-36 overflow-hidden flex justify-center items-center">
                     <div className="flex absolute animate-scroll">
                         {duplicatedLogos.map((logo, index) => (
                             <div
                                 key={index}
-                                className="group relative mx-4 md:mx-8 h-24 w-24 border border-gray-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-90"
+                                className="group relative mx-4 md:mx-8 h-24 w-24 border border-orange-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-90 hover:shadow-lg hover:shadow-orange-500/50 group"
                             >
                                 {/* Background fade animation on hover */}
                                 <div className="absolute inset-0 rounded-full  opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>

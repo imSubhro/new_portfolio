@@ -50,7 +50,7 @@ const SingleProject = ({ project }) => {
     const { name, description, tags, code, demo, tools, role } = project;
 
     return (
-        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#D26412] shadow-2xl rounded-lg border border-[#1a1443]'>
+        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020] shadow-2xl rounded-lg border border-[#D3D3D3]'>
             <div className='flex flex-col items-center justify-between w-full h-full '>
 
                 <div className="flex items-center w-full relative mb-2">
@@ -69,28 +69,28 @@ const SingleProject = ({ project }) => {
 
 
 
-                <div className="bg-background py-5 pl-6 border-t border-black ">
+                <div className="bg-background py-5 pl-6  border-t  border-orange-500 ">
 
                     <div className="blink">
                         <span className="mr-2 text-white">const</span>
-                        <span className="mr-2 text-white">project</span>
+                        <span className="mr-2 text-orange-400 font-semibold ">project</span>
                         <span className="mr-2 text-white">=</span>
-                        <span className="text-gray-400">{'{'}</span>
+                        <span className="text-gray-200">{'{'}</span>
                     </div>
                     <div className="w-full px-4 py-3 flex flex-col gap-2">
                         <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base">
-                            <span className="font-semibold text-violet-300">myRole:</span> {role}
+                            <span className="font-bold text-orange-400 underline underline-offset-2">myRole:</span> {role}
                         </p>
 
                         <div>
-                            <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base font-semibold text-violet-300 mb-1">
+                            <p className="text-orange-400 text-xs sm:text-sm md:text-base font-bold mb-1.5 underline underline-offset-2">
                                 Tech Stack:
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {tools.map((tool, idx) => (
                                     <span
                                         key={idx}
-                                        className="bg-[#1a1443] text-[#EFF3F4] px-2 py-1 rounded-md text-xs"
+                                        className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs"
                                     >
                                         {tool}
                                     </span>
@@ -99,9 +99,9 @@ const SingleProject = ({ project }) => {
                         </div>
 
                         <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2">
-                            <span className="font-semibold text-violet-300">Description:</span> {description}
+                            <span className="font-bold text-orange-400 underline underline-offset-2">Description:</span> {description}
                         </p>
-                        <div><span className="text-gray-400">{`};`}</span></div>
+                        <div><span className="text-gray-200">{`};`}</span></div>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@ const SingleProject = ({ project }) => {
                         href={demo}
                         target='_blank'
                         rel="noreferrer"
-                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:bg-[#231d4b] hover:text-violet-600 hover:border-[#0F0C41] hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
+                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 group hover:text-orange-600 hover:border-orange-600 hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
                         <FaPlay className="text-xs sm:text-sm md:text-base" />
                     </a>
 
@@ -120,7 +120,7 @@ const SingleProject = ({ project }) => {
                         href={code}
                         target='_blank'
                         rel="noreferrer"
-                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:bg-[#231d4b] hover:text-violet-600 hover:border-[#0F0C41] hover:scale-110 cursor-pointer no-underline delay-[0.3s]">
+                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:text-orange-600 hover:border-orange-600 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30 group cursor-pointer no-underline delay-[0.3s]">
                         <FaCode className="text-xs sm:text-sm md:text-base" />
                     </a>
                 </div>
@@ -136,10 +136,10 @@ const Projects = () => {
             <div className="sticky top-6 sm:top-8 md:top-10">
                 <div className="w-[50px] sm:w-[60px] md:w-[80px] h-[50px] sm:h-[60px] md:h-[80px] bg-violet-500 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
                 <div className="flex items-center justify-start relative">
-                    <span className="bg-[#1a1443] absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
+                    <span className=" bg-gradient-to-r from-orange-500 to-red-600 absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
                         PROJECTS
                     </span>
-                    <span className="w-full h-[2px] bg-[#1a1443]"></span>
+                    <span className="w-full h-[2.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent "></span>
                 </div>
             </div>
             <div className="pt-12 sm:pt-16 md:pt-20 lg:pt-24">

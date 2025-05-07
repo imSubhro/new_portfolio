@@ -1,73 +1,79 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-
+import Lottie from "lottie-react";
+import testanim from "../../assets/lotti/lotti.json";
 
 export default function Contact() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const subject = formData.get("subject");
+        const message = formData.get("message");
 
-
-    const { register, handleSubmit } = useForm();
-
-    const onSubmit = (formData) => {
-        window.location.href = `mailto:mohanta.subhro04@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name} :
-       ${formData.message} (${formData.email})`;
+        window.location.href = `mailto:mohanta.subhro04@gmail.com?subject=${subject}&body=Hi, my name is ${name} : ${message} (${email})`;
     };
 
-
     return (
-        <>
+        <div className="relative w-full overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-10">
+            <div className="mx-auto max-w-6xl">
+                <h2 className="text-center text-3xl font-bold tracking-wider text-[#E2711E] sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
+                    LET'S GET IN TOUCH!
+                </h2>
 
-            <div className=" flex flex-col relative text-center overflow-hidden lg-tablet:text-left  px-4 sm:px-6 lg-tablet:px-10 justify-start p-15  items-center z-0">
-                <div className="w-[100%] text-4xl p-2 text-center text-[#E2711E] lg:text-7xl font-bold top-24 uppercase tracking-[4px] lg-tablet:tracking-[14px]">
-                    Let's get in Touch!
-                </div>
-
-                <div className="flex flex-col space-y-10 pt-16">
-                    <div className="flex flex-col lg-tablet:flex-row lg-tablet:gap-15 w-full justify-center items-center pt-4 ">
-                        <div className="flex flex-col items-center w-full ">
-
-                            <div className="flex flex-col items-center text-left text-sm font-light space-y-4">
-                                <div className="border-b border-t dark:border-neutral-500 flex items-center w-full max-w-md">
-                                    <div className=" px-4 my-2">
-                                        <p className="text-base lg-tablet:text-xl">+91-9876543210</p>
-                                    </div>
-                                </div>
-
-
-                                <div className="border-b dark:border-neutral-500 flex items-center w-full max-w-md">
-                                    <div className="whitespace-nowrap px-4 mb-2">
-                                        <p className="text-base lg-tablet:text-xl">mohanta.subhro04@gmail.com</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div className="border-b dark:border-neutral-500 flex items-center w-full max-w-md">
-                                    <div className="whitespace-nowrap px-4 mb-2">
-                                        <p className="text-base lg-tablet:text-xl">Kolkata, India</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
+                <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between md:gap-6">
+                    {/* Animation container */}
+                    <div className="mx-auto w-full max-w-xs md:mx-0 md:max-w-sm lg:max-w-md">
+                        <div className="h-[250px] w-full sm:h-[300px] md:h-[350px] lg:h-[400px]">
+                            <Lottie animationData={testanim} loop={true} />
                         </div>
-
-
-
-                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-full max-w-lg">
-                            <div className="flex flex-col lg-tablet:flex-row gap-2 lg-tablet:gap-4">
-                                <input {...register('name')} placeholder="Name" className="contactInput outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40" type="text" />
-                                <input {...register('email')} placeholder="Email" className="contactInput outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40" type="email" />
-                            </div>
-                            <div className="flex flex-col space-y-2 lg-tablet:w-full">
-                                <input {...register('subject')} placeholder="Subject" className="contactInput outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40" type="text" />
-                                <textarea {...register('message')} placeholder="Message" className="contactInput outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40" />
-                                <button type="submit" className="py-5 px-10 rounded-md text-[#fffdfb] uppercase font-bold bg-[#D26412] hover:cursor-pointer">Submit</button>
-                            </div>
-                        </form>
                     </div>
 
+                    {/* Form container */}
+                    <div className="mt-8 w-full md:mt-0 md:max-w-lg">
+                        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                                <input
+                                    name="name"
+                                    placeholder="Name"
+                                    className="contactInput flex-1 rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                    type="text"
+                                    required
+                                />
+                                <input
+                                    name="email"
+                                    placeholder="Email"
+                                    className="contactInput flex-1 rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                    type="email"
+                                    required
+                                />
+                            </div>
+
+                            <input
+                                name="subject"
+                                placeholder="Subject"
+                                className="contactInput rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                type="text"
+                                required
+                            />
+
+                            <textarea
+                                name="message"
+                                placeholder="Message"
+                                className="contactInput min-h-[120px] rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                required
+                            />
+
+                            <button
+                                type="submit"
+                                className="mt-2 self-center rounded-md bg-[#D26412] px-8 py-3 font-bold uppercase text-[#fffdfb] transition-all hover:bg-[#E2711E] hover:cursor-pointer sm:self-start md:px-10 md:py-4"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

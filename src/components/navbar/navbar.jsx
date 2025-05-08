@@ -1,24 +1,33 @@
 import { useState, useEffect } from "react";
-import { IoHome } from "react-icons/io5";
-import { FaCircleInfo } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-// import { SiGoogleforms } from "react-icons/si";
-import { FaHeadphones } from "react-icons/fa";
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   // Toggle menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Handle scroll for navbar effects
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Close menu when clicking outside on mobile
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 990) {
+      if (window.innerWidth > 860) {
         setIsOpen(false);
       }
     };
@@ -40,63 +49,55 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <div className="p-8 pl-14 pr-14">
-      <div className="border border-orange-500 flex justify-between items-center p-4 rounded-3xl relative z-10">
+    <div className="p-8 pl-15 pr-15">
+      <div className={`border border-orange-500 flex justify-between items-center p-4 rounded-3xl relative z-10 transition-all duration-300 ${scrolled ? 'bg-black bg-opacity-80 backdrop-blur-sm' : ''}`}>
         {/* Logo */}
-        <div>
-          <h1 className="text-xl font-bold ">SUBHRO</h1>
+        <div className="group">
+          <h1 className="text-xl font-bold relative">
+            SUBHRO
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </h1>
         </div>
 
         {/* Navigation Links - Visible on screens larger than 990px */}
         <div className="hidden md:flex justify-center items-center gap-10">
-          <a
-            href="/"
-            className="flex items-center gap-2 hover:text-orange-600 transition-colors "
-          >
-            <span>
-              <IoHome />
-            </span>
-            Home
-          </a>
+
           <a
             href="/about"
-            className="flex items-center gap-2 hover:text-orange-600 transition-colors"
+            className="flex items-center text-xl gap-2 hover:text-orange-600 transition-colors relative group"
           >
-            <span>
-              <FaCircleInfo />
-            </span>
-            About
+            .About( )
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a
+            href="/"
+            className="flex items-center text-xl gap-2 hover:text-orange-600 transition-colors relative group"
+          >
+            .Skills( )
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="/projects"
-            className="flex items-center gap-2 hover:text-orange-600 transition-colors"
+            className="flex items-center text-xl gap-2 hover:text-orange-600 transition-colors relative group"
           >
-            <span>
-              <FaCode />
-            </span>
-            Projects
+
+            .Projects( )
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a
+            href="/"
+            className="flex items-center text-xl gap-2 hover:text-orange-600 transition-colors relative group"
+          >
+            .Experience( )
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="/contact"
-            className="flex items-center gap-2  hover:text-orange-600 transition-colors"
-            onClick={toggleMenu}
+            className="flex items-center text-xl gap-2 hover:text-orange-600 transition-colors relative group"
           >
-            <span>
-              <FaHeadphones />
-            </span>
-            Contact
+            .Contact( )
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          {/* <a
-            href="/resume"
-            className="flex items-center gap-2  hover:text-gray-600 transition-colors"
-            onClick={toggleMenu}
-          >
-            <span>
-              <SiGoogleforms />
-            </span>
-            Resume
-          </a> */}
-
         </div>
 
         {/* Hamburger Menu Button - Visible only on screens 990px or smaller */}
@@ -104,18 +105,15 @@ export default function Navbar() {
           <div className="flex flex-col justify-between h-6 w-8 cursor-pointer">
             {/* Bar 1 */}
             <div
-              className={`h-0.5 bg-red-500 rounded-full transform transition-all duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-2.5" : ""
-                }`}
+              className={`h-0.5 bg-red-500 rounded-full transform transition-all duration-500 ease-in-out ${isOpen ? "rotate-45 translate-y-2.5 w-8" : "w-6 ml-2"}`}
             ></div>
             {/* Bar 2 */}
             <div
-              className={`h-0.5 bg-yellow-500 rounded-full transition-all duration-300 ease-in-out ${isOpen ? "opacity-0" : ""
-                }`}
+              className={`h-0.5 bg-yellow-500 rounded-full transition-all duration-300 ease-in-out ${isOpen ? "opacity-0 w-8" : "opacity-100 w-4 ml-4"}`}
             ></div>
             {/* Bar 3 */}
             <div
-              className={`h-0.5 bg-green-500 rounded-full transform transition-all duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-2.5" : ""
-                }`}
+              className={`h-0.5 bg-green-500 rounded-full transform transition-all duration-500 ease-in-out ${isOpen ? "-rotate-45 -translate-y-2.5 w-8" : "w-8"}`}
             ></div>
           </div>
         </div>
@@ -123,15 +121,13 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-500 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         onClick={toggleMenu}
       ></div>
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-black shadow-lg z-30 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 h-full w-2/3 bg-black shadow-lg z-30 transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Close Button */}
         <button
@@ -139,60 +135,28 @@ export default function Navbar() {
           className="absolute top-4 right-4 p-2 text-orange-600 hover:text-orange-500 transition-colors rounded-full hover:bg-black"
           aria-label="Close menu"
         >
-          <IoMdClose size={24} />
+          <IoMdClose size={24} className="animate-pulse" />
         </button>
 
         <div className="flex flex-col pt-20 px-6 h-full">
-          <a
-            href="/"
-            className="flex items-center gap-2 py-4   text-lg border-b border-gray-200"
-            onClick={toggleMenu}
-          >
-            <span>
-              <IoHome />
-            </span>
-            Home
-          </a>
-          <a
-            href="/about"
-            className="flex items-center gap-2 py-4 text-lg border-b border-gray-200"
-            onClick={toggleMenu}
-          >
-            <span>
-              <FaCircleInfo />
-            </span>
-            About
-          </a>
-          <a
-            href="/projects"
-            className="flex items-center gap-2 py-4 text-lg border-b border-gray-200"
-            onClick={toggleMenu}
-          >
-            <span>
-              <FaCode />
-            </span>
-            Projects
-          </a>
-          {/* <a
-            href="/resume"
-            className="flex items-center gap-2 py-4 text-lg border-b border-gray-200"
-            onClick={toggleMenu}
-          >
-            <span>
-              <SiGoogleforms />
-            </span>
-            Resume
-          </a> */}
-          <a
-            href="/contact"
-            className="flex items-center gap-2 py-4 text-lg border-b border-gray-200"
-            onClick={toggleMenu}
-          >
-            <span>
-              <FaHeadphones />
-            </span>
-            Contact
-          </a>
+          {[
+            { href: "/", text: "Home" },
+            { href: "/about", text: "About" },
+            { href: "/", text: "Skills" },
+            { href: "/projects", text: "Projects" },
+            { href: "/", text: "Experience" },
+            { href: "/contact", text: "Contact" }
+          ].map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className={`flex items-center gap-2 py-4 text-lg border-b border-gray-700 transition-all duration-300 transform hover:translate-x-2 hover:text-orange-500`}
+              onClick={toggleMenu}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </div>

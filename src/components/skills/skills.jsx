@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 import python from "../../assets/image/logos/python.svg";
 import c from "../../assets/image/logos/c.svg";
@@ -42,6 +43,11 @@ import figma from "../../assets/image/logos/figma.png";
 
 
 export default function Skills() {
+
+
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+
     // This is where you just need to change the image paths
     // Replace these paths with your actual image paths
     const skillLogos = [
@@ -88,6 +94,7 @@ export default function Skills() {
 
     const duplicatedLogos = [...skillLogos, ...skillLogos];
 
+
     return (
 
         <>
@@ -98,7 +105,7 @@ export default function Skills() {
                         <div className="h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
                     </div>
                 </div>
-                <div className="flex justify-center my-5 lg:py-8">
+                <div className="flex justify-center my-5 lg:py-10">
                     <div className="flex  items-center">
                         <span className="w-24 h-[1.5px] bg-orange-400"></span>
                         <span className="bg-gradient-to-r from-orange-500 to-red-500 w-fit text-white p-2 px-5 text-xl rounded-md">
@@ -110,47 +117,49 @@ export default function Skills() {
 
 
                 {/* Infinite scrolling container */}
-                <div className="relative w-full h-36 overflow-hidden flex justify-center items-center">
-                    <div className="flex absolute animate-scroll">
+                <div className="relative w-full h-36 overflow-hidden">
+                    <div className="flex absolute animate-scroll hover:animation-pause">
                         {duplicatedLogos.map((logo, index) => (
                             <div
                                 key={index}
-                                className="group relative mx-4 md:mx-8 h-24 w-24 border border-orange-400 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-90 hover:shadow-lg hover:shadow-orange-500/50 group"
+                                className="group relative mx-4 md:mx-8 h-25 w-25 border border-orange-400 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-90 hover:shadow-lg hover:shadow-orange-500/50"
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
                             >
                                 {/* Background fade animation on hover */}
-                                <div className="absolute inset-0 rounded-full  opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
 
-                                <img
-                                    src={logo.src}
-                                    alt={logo.alt}
-                                    className="w-14 h-14 z-10 group-hover:text-orange-500"
-                                />
-
-                                {/* Optional: Show skill name on hover */}
-                                <span className=" text-orange-500 absolute -bottom-7 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">
-                                    {logo.alt}
-                                </span>
+                                <div className="flex flex-col items-center">
+                                    <img
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        className="w-12 h-12 z-10 group-hover:text-orange-500"
+                                    />
+                                    <p className="text-white text-xs sm:text-sm mt-1 text-center">
+                                        {logo.alt}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* CSS for the infinite scroll animation */}
+                {/* CSS for the infinite scroll animation with pause on hover */}
                 <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 50s linear infinite;
-        }
-      `}</style>
-            </div>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 50s linear infinite;
+  }
+`}</style>
 
+            </div>
 
         </>
 

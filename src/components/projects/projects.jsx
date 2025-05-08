@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 import { FaCode, FaPlay } from 'react-icons/fa';
+import more from '../../assets/image/button.png';
+
 
 // Project data embedded in the same file
 const projectsData = [
@@ -157,7 +159,13 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
+
+
             </div>
+
+
+
+
         </div>
     );
 };

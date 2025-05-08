@@ -1,0 +1,69 @@
+
+@import "tailwindcss";
+
+/* Custom Tailwind Color variables */
+@theme {
+    --color-fleshtin: #f5d3b0;
+    --color-Custom-gray: #525252;
+    --color-Custom-black: #1C1D20;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-input-background: rgba(255, 255, 255, 1);
+    --color-yellow-ochare: #ff9f1c;
+    --color-sea-buckthorn: #ffbf69;
+    --color-fatback: #fff7ee;
+    --color-windswept: #cbf3f0;
+    --color-blue-green: #2ec4b6;
+    --color-yankees-blue: #22303F;
+    --color-platinum: #E7E8E7;
+}
+
+/* Responsive Breakpoints variables */
+@theme {
+    --breakpoint-large-tablet: 61.938rem;
+    --breakpoint-tablet: 48rem;
+    --breakpoint-mobile: 21.563rem;
+    --breakpoint-footer: 33.75rem;
+}
+
+
+.introduction {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    background-color: #141516;
+}
+
+.introduction svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+}
+
+.introduction svg path {
+    fill: #141516;
+}
+
+.introduction p {
+    display: flex;
+    color: white;
+    font-size: 42px;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.introduction p span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}

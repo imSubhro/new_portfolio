@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import testanim from "../../assets/lotti/lotti.json";
+import PaperPlaneButton from "../paperPlaneButton/index.jsx";
 
 export default function Contact() {
     const handleSubmit = (e) => {
@@ -17,7 +18,13 @@ export default function Contact() {
     return (
         <div className="relative w-full overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-10">
             <div className="mx-auto max-w-6xl">
-                <h2 className="text-center text-3xl font-bold tracking-wider text-[#E2711E] sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
+
+                <div className="flex justify-center -translate-y-[1px]">
+                    <div className="w-3/4">
+                        <div className="h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
+                    </div>
+                </div>
+                <h2 className=" pt-5 text-center text-3xl font-bold text-orange-500 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
                     LET'S GET IN TOUCH!
                 </h2>
 
@@ -36,14 +43,14 @@ export default function Contact() {
                                 <input
                                     name="name"
                                     placeholder="Name"
-                                    className="contactInput flex-1 rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                    className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="text"
                                     required
                                 />
                                 <input
                                     name="email"
                                     placeholder="Email"
-                                    className="contactInput flex-1 rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                    className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="email"
                                     required
                                 />
@@ -52,7 +59,7 @@ export default function Contact() {
                             <input
                                 name="subject"
                                 placeholder="Subject"
-                                className="contactInput rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                className="contactInput rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 type="text"
                                 required
                             />
@@ -60,16 +67,11 @@ export default function Contact() {
                             <textarea
                                 name="message"
                                 placeholder="Message"
-                                className="contactInput min-h-[120px] rounded-sm border-b border-[#242424] bg-slate-400/10 px-4 py-3 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40"
+                                className="contactInput min-h-[120px] rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 required
                             />
+                            <button><PaperPlaneButton /></button>
 
-                            <button
-                                type="submit"
-                                className="mt-2 self-center rounded-md bg-[#D26412] px-8 py-3 font-bold uppercase text-[#fffdfb] transition-all hover:bg-[#E2711E] hover:cursor-pointer sm:self-start md:px-10 md:py-4"
-                            >
-                                Submit
-                            </button>
                         </form>
                     </div>
                 </div>

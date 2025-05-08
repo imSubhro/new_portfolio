@@ -5,8 +5,8 @@
     --breakpoint-lg-tablet: 61.938rem;
 }
 
-@layer components {
+/* @layer components {
     .contactInput {
         @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#E69254]/40 focus:text-[#E69254]/40 hover:border-[#E69254]/40;
     }
-}
+} */

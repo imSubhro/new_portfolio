@@ -60,7 +60,7 @@ import Navbar from "./components/navbar/navbar.jsx";
 import About from "./components/About/About.jsx";
 import Skills from "./components/skills/skills.jsx";
 import Projects from "./components/projects/projects.jsx";
-// import Experience from "./components/Experience/experience.jsx";
+import Experience from "./components/Experience/experience.jsx";
 import Contact from "./components/Contact/contact.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Intro from "./components/Intro/intro.jsx";
@@ -73,7 +73,7 @@ const MainContain = () => {
       <About />
       <Skills />
       <Projects />
-      {/* <Experience /> */}
+      <Experience />
       <Contact />
       <Footer />
     </>

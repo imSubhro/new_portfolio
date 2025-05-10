@@ -91,7 +91,10 @@ export default function Navbar() {
       <div className={`border border-orange-500 flex justify-between items-center p-4 rounded-3xl relative z-10 transition-all duration-300 ${scrolled ? 'bg-black bg-opacity-80 backdrop-blur-sm' : ''}`}>
         {/* Logo */}
         <div className="group">
-          <h1 className="text-xl font-bold relative">
+          <h1 className="text-xl font-bold relative hover:cursor-pointer" onClick={(e) => {
+            e.preventDefault();
+            navigateToSection("Home");
+          }}>
             SUBHRO
             <span className="absolute -bottom-1 left-0 w-0 h-0.5  transition-all duration-300 group-hover:w-full"></span>
           </h1>

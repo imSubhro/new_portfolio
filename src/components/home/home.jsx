@@ -23,6 +23,10 @@ export default function home() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [resumeVisible, setResumeVisible] = useState(false);
 
+  const handleResumeClick = () => {
+    window.open("https://drive.google.com/file/d/1YCGTfEu-wlKhGz01-NbYiVpZfUgucGI4/view?usp=sharing", "_blank");
+  };
+
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
     const typingSpeed = isDeleting ? 50 : 100;
@@ -66,8 +70,8 @@ export default function home() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 w-full p-4 md:p-8 lg:p-19">
         {/* Image column - changes order on mobile vs desktop */}
-        <div className="flex justify-center items-center w-full order-1 lg:order-2 py-6">
-          <div className="relative pl-10 w-64 h-64 md:w-75 md:h-75 lg:w-105 lg:h-105 transform transition-all duration-500 hover:scale-105">
+        <div className="flex justify-center items-center w-full order-1 lg:order-2 py-12">
+          <div className="relative w-60 h-60 md:w-75 md:h-75 lg:w-105 lg:h-105 transform transition-all duration-500 hover:scale-110">
             <img
               src={Mine}
               alt="Subhro's_Profile_Picture"
@@ -101,8 +105,8 @@ export default function home() {
             </button>
 
             <button
-              onClick={toggleResume}
-              className="w-full sm:w-auto cursor-pointer font-bold text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center justify-center"
+              onClick={handleResumeClick}
+              className="w-full sm:w-auto cursor-pointer font-bold text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center justify-center px-4 py-2 rounded"
             >
               <FaFileAlt className="mr-2" /> View Resume
             </button>
@@ -121,14 +125,6 @@ export default function home() {
                     Close
                   </button>
                 </div>
-                <div className="flex-grow overflow-auto">
-                  {/* Embed resume content here - could be an iframe with PDF viewer or HTML content */}
-                  <iframe
-                    src="/resume.pdf"
-                    className="w-full h-full"
-                    title="Subhro's Resume"
-                  />
-                </div>
               </div>
             </div>
           )}
@@ -136,22 +132,22 @@ export default function home() {
           {/* Social icons - made responsive */}
           <div className="social-icons w-full mt-6">
             <div className="flip flex justify-start gap-4 items-center ">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <a href="https://github.com/imSubhro" className="transform transition-transform hover:scale-110">
                 <FaGithub className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-orange-500" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/subhro-mohanta/" className="transform transition-transform hover:scale-110">
                 <TbBrandLinkedinFilled className="w-8 h-8 md:w-10 md:h-10 icon text-blue-700 hover:text-blue-500" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <a href="https://x.com/subhro_vk" className="transform transition-transform hover:scale-110">
                 <FaXTwitter className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-blue-500" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <a href="https://www.instagram.com/just.subhro?igsh=MTcycm43Nzc5NTlneg==" className="transform transition-transform hover:scale-110">
                 <FaInstagram className="w-8 h-8 md:w-10 md:h-10 icon text-pink-600 hover:text-pink-700" />
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     </>
   );
 }

@@ -1,26 +1,94 @@
+// import { BrowserRouter as Routes, Route, Router } from "react-router";
+
+// import Preloder from "./components/preloader/preloader.jsx";
+// import Home from "./components/home/home.jsx";
+// import Navbar from "./components/navbar/navbar.jsx";
+// import About from "./components/About/About.jsx";
+// import Skills from "./components/skills/skills.jsx";
+// import Projects from "./components/projects/projects.jsx";
+// import Experience from "./components/Experience/experience.jsx";
+// import Contact from "./components/Contact/contact.jsx";
+// import Footer from "./components/Footer/footer.jsx";
+// import Intro from "./components/Intro/intro.jsx";
+
+// const MainContain = () => {
+//   return (
+//     <>
+//       <Preloder />
+//       <Home />
+//       <About />
+//       <Skills />
+//       <Projects />
+//       <Experience />
+//       <Contact />
+//       <Footer />
+//     </>
+//   );
+// };
+
+// function App() {
+//   return (
+//     <>
+//       <Router>
+//         <Navbar />
+//         <Routes>
+//           <Route path="/" element={<MainContain />} />
+//           <Route path="/Intro" element={<Intro />} />
+
+//         </Routes>
+//       </Router>
+
+
+
+
+
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Preloder from "./components/preloader/preloader.jsx";
 import Home from "./components/home/home.jsx";
 import Navbar from "./components/navbar/navbar.jsx";
 import About from "./components/About/About.jsx";
 import Skills from "./components/skills/skills.jsx";
 import Projects from "./components/projects/projects.jsx";
-import Experience from "./components/Experience/experience.jsx";
+// import Experience from "./components/Experience/experience.jsx";
 import Contact from "./components/Contact/contact.jsx";
 import Footer from "./components/Footer/footer.jsx";
+import Intro from "./components/Intro/intro.jsx";
 
-function App() {
+const MainContain = () => {
   return (
     <>
       <Preloder />
-      <Navbar />
       <Home />
       <About />
       <Skills />
       <Projects />
-      <Experience />
+      {/* <Experience /> */}
       <Contact />
       <Footer />
     </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<MainContain />} />
+        <Route path="/Intro" element={<Intro />} />
+      </Routes>
+    </Router>
   );
 }
 

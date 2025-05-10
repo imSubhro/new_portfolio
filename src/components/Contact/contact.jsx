@@ -16,7 +16,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="relative w-full overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-10">
+        <div className="relative w-full overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-10" id="contact">
             <div className="mx-auto max-w-6xl">
 
                 <div className="flex justify-center -translate-y-[1px]">
@@ -37,7 +37,7 @@ export default function Contact() {
                     </div>
 
                     {/* Form container */}
-                    <div className="mt-8 w-full md:mt-0 md:max-w-lg">
+                    <div className="mt-12 w-full md:mt-0 md:max-w-lg">
                         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                                 <input

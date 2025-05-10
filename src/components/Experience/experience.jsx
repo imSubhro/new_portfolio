@@ -6,7 +6,7 @@ export default function Experience() {
         <>
 
 
-            <div className="flex justify-center -translate-y-[1px]">
+            <div className="flex justify-center -translate-y-[1px]" id="experience">
                 <div className="w-3/4">
                     <div className="h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
                 </div>

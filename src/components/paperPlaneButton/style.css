@@ -1,7 +1,7 @@
 .button {
     --primary: #FF6200;
-    --primary-dark: #FF6200;
-    --primary-darkest: #FF6200;
+    --primary-dark: #7f563d;
+    --primary-darkest: #d69973;
     /* --shadow: rgba(0, 0, 0, 0.3); */
     --text: #ffffff;
     --text-opacity: 1;

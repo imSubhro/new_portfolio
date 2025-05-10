@@ -1,7 +1,7 @@
 // import { useState } from 'react';
-import { FaCode, FaPlay } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
 import more from '../../assets/image/button.png';
-
+import { BsGithub } from "react-icons/bs";
 
 // Project data embedded in the same file
 const projectsData = [
@@ -35,24 +35,17 @@ const projectsData = [
         tools: ["Python", "HTML", "Tailwind CSS"],
         role: "Lead Developer"
     },
-    {
-        id: 4,
-        name: "Weather Dashboard",
-        description: "An interactive weather dashboard that provides real-time weather data, forecasts, and historical weather information for locations worldwide.",
-        tags: ["JavaScript", "API", "CSS"],
-        code: "https://github.com/yourusername/weather-dashboard",
-        demo: "https://yourweatherapp.com",
-        tools: ["JavaScript", "OpenWeather API", "Chart.js"],
-        role: "Frontend Developer"
-    }
+
 ];
 
 // SingleProject component
 const SingleProject = ({ project }) => {
     const { name, description, tags, code, demo, tools, role } = project;
 
+
+
     return (
-        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020] shadow-2xl rounded-lg border border-[#D3D3D3]'>
+        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020]  rounded-lg border border-[#D3D3D3]'>
             <div className='flex flex-col items-center justify-between w-full h-full '>
 
                 <div className="flex items-center w-full relative mb-2">
@@ -123,7 +116,7 @@ const SingleProject = ({ project }) => {
                         target='_blank'
                         rel="noreferrer"
                         className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:text-orange-600 hover:border-orange-600 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30 group cursor-pointer no-underline delay-[0.3s]">
-                        <FaCode className="text-xs sm:text-sm md:text-base" />
+                        <BsGithub className="text-xs sm:text-sm md:text-base" />
                     </a>
                 </div>
             </div>

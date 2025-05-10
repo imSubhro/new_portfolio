@@ -1,22 +1,42 @@
-🚀 Portfolio Website using React
-🔗 Live Demo: [Portfolio](https://imsubhro.vercel.app/)
+# 💼 My Developer Portfolio
 
-This is a portfolio website built using React.js and Tailwind CSS. It showcases my skills, projects, and experience in web development.
+Welcome to my personal portfolio! This repository showcases who I am, what I’ve built, and what I’m passionate about. Built with a modern tech stack and designed with clarity and performance in mind
 
-🛠️ Local Setup Instructions
-To view and run this portfolio locally on your machine, follow the steps below:
+---
 
-1. Clone the Repository
+## 🌐 Live Preview
+
+Check out the live version of my portfolio here: [https://myportfolio.live](https://imsubhro.vercel.app/)
+
+---
 
 
+## 🛠️ Running Locally
+
+Clone the project:
+
+```bash
 git clone https://github.com/imSubhro/new_portfolio.git
 
-2. Install Dependencies
+```
 
+## Install dependencies:
+
+```bash
 npm install
-3. Run the Development Server
 
-npm run dev
-Now, open your browser and go to:
-📍 http://localhost:5173 
+```
 
+### Run the development server:
+```bash
+npm run dev   
+```
+---
+### 📬 Contact Me
+Email: mohanta.subhro04@gmail.com
+
+---
+### 📝 License
+
+
+This project is open source and available under the MIT License.

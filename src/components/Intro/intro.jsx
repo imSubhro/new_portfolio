@@ -66,6 +66,12 @@ export default function Intro() {
 
             {/* Journey Section */}
             <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+
+                <div className="flex justify-center -translate-y-[1px] pb-5" >
+                    <div className="w-3/2">
+                        <div className="h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
+                    </div>
+                </div>
                 <div className="bg-gray-400 rounded-xl p-6 sm:p-10 shadow-xl">
                     <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-bold text-orange-500 text-center mb-12 lg-tablet:mb-16">
                         My Journey

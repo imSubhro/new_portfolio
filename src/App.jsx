@@ -62,6 +62,7 @@ import Skills from "./components/skills/skills.jsx";
 import Projects from "./components/projects/projects.jsx";
 import Experience from "./components/Experience/experience.jsx";
 import Contact from "./components/Contact/contact.jsx";
+import ScrollTop from "./components/Scrolltop/scroll.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Intro from "./components/Intro/intro.jsx";
 
@@ -75,6 +76,7 @@ const MainContain = () => {
       <Projects />
       <Experience />
       <Contact />
+      <ScrollTop />
       <Footer />
     </>
   );

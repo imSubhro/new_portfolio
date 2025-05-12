@@ -1,7 +1,7 @@
 import Introimg from "../../assets/image/aboutme.png";
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
-
+import ScrollTop from "../Scrolltop/scroll";
 
 export default function Intro() {
     // Journey data
@@ -31,6 +31,7 @@ export default function Intro() {
 
     return (
         <div className="bg-[#161616] text-white">
+            <ScrollTop />
             {/* About Me Section */}
             <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg-tablet:grid-cols-2 gap-8 items-center">

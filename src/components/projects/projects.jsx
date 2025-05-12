@@ -2,6 +2,8 @@
 import { FaPlay } from 'react-icons/fa';
 import more from '../../assets/image/button.png';
 import { BsGithub } from "react-icons/bs";
+import { MdOutlineScreenShare } from "react-icons/md";
+
 
 // Project data embedded in the same file
 const projectsData = [
@@ -108,7 +110,7 @@ const SingleProject = ({ project }) => {
                         target='_blank'
                         rel="noreferrer"
                         className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 group hover:text-orange-600 hover:border-orange-600 hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
-                        <FaPlay className="text-xs sm:text-sm md:text-base" />
+                        <MdOutlineScreenShare className="text-xs sm:text-sm md:text-base" />
                     </a>
 
                     <a

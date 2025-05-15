@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+
 import { FaPlay } from 'react-icons/fa';
 import more from '../../assets/image/button.png';
 import { BsGithub } from "react-icons/bs";
@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Decentralized and borderless platform worldwide users can collectively learn, teach and GROW TOGETHER. Collaborative community platform for sharing knowledge through videos.",
+        description: "Khelratna is a comprehensive platform designed for local cricket tournaments, offering real-time scoring, match management, and daily live streaming. Built to simplify the organization of grassroots cricket.",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         code: "https://github.com/yourusername/open-course",
         demo: "https://opencourse.com",

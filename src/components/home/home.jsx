@@ -97,7 +97,9 @@ export default function home() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-            <button className="w-full sm:w-52 h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
+            <button
+              onClick={() => window.location.href = 'mailto:subhromohanta16@gmail.com?subject=Work Opportunity&body=Hi Subhro, I would like to discuss a work opportunity with you.'}
+              className="w-full sm:w-52 h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
               <span className="relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
                 Work with Me
               </span>

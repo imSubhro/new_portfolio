@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './style.css';
 
-const PaperPlaneButton = () => {
+const PaperPlaneButton = ({ isSubmitting = false }) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const PaperPlaneButton = () => {
     const getVar = variable => getComputedStyle(button).getPropertyValue(variable);
 
     const handleClick = e => {
-      if (!button.classList.contains('active')) {
+      if (!button.classList.contains('active') && !isSubmitting) {
         button.classList.add('active');
 
         gsap.to(button, {
@@ -128,10 +128,26 @@ const PaperPlaneButton = () => {
     return () => {
       button.removeEventListener('click', handleClick);
     };
-  }, []);
+  }, [isSubmitting]);
+
+  // Trigger animation when isSubmitting becomes true
+  useEffect(() => {
+    const button = buttonRef.current;
+    if (!button) return;
+
+    if (isSubmitting && !button.classList.contains('active')) {
+      // Simulate click to trigger animation
+      button.click();
+    }
+  }, [isSubmitting]);
 
   return (
-    <button className="button" ref={buttonRef}>
+    <button
+      className={`button ${isSubmitting ? 'submitting' : ''}`}
+      ref={buttonRef}
+      type="submit"
+      disabled={isSubmitting}
+    >
       <span className="default">Send</span>
       <span className="success">
         <svg viewBox="0 0 16 16">

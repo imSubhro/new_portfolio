@@ -57,10 +57,13 @@ export default function About() {
                                 border-2 border-orange-500
                                 cursor-pointer
                                 overflow-hidden
-                                transition-all duration-500
-                                hover:shadow-lg hover:shadow-orange-500/30
+                                transition-all duration-500 ease-in-out
+                                hover:shadow-lg hover:shadow-orange-500/50
+                                hover:scale-110
+                                active:scale-95
                                 group
-                                ${isHovered ? 'text-white scale-105' : 'text-white'}
+                                ${isHovered ? 'text-white shadow-2xl shadow-orange-500/40' : 'text-white'}
+                                animate-pulse
                             `}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
@@ -69,26 +72,42 @@ export default function About() {
                                 // Add any navigation or modal open functionality here
                             }
                         >
-                            <div className="relative z-10 text-center">
-                                <span className="text-sm md:text-base font-medium">More</span>
+                            <div className="relative z-10 text-center transition-all duration-300">
+                                <span className={`text-sm md:text-base font-medium transition-all duration-300 ${isHovered ? 'transform scale-105' : ''}`}>More</span>
                                 <br />
-                                <span className="text-xs md:text-sm font-medium">About Me</span>
+                                <span className={`text-xs md:text-sm font-medium transition-all duration-300 ${isHovered ? 'transform scale-105' : ''}`}>About Me</span>
                             </div>
 
+                            {/* Background bubble effect */}
                             <div
                                 className={`
                                     absolute inset-0 
-                                    bg-white-500
+                                    bg-gradient-to-r from-orange-500/20 to-red-500/20
                                     rounded-full
-                                    transform scale-0
-                                    transition-transform duration-500 ease-out
-                                    ${isHovered ? 'scale-100' : 'scale-0'}
+                                    transform transition-all duration-500 ease-out
+                                    ${isHovered ? 'scale-110 opacity-100' : 'scale-0 opacity-0'}
                                 `}
                             />
 
-                            {/* Animated circular pulse */}
-                            <span className="absolute inset-0 rounded-full border-2 border-orange-500/50 
-                                  animate-ping opacity-30 group-hover:opacity-70"></span>
+                            {/* Outer ring animation */}
+                            <div
+                                className={`
+                                    absolute inset-0 
+                                    border-2 border-orange-500/30
+                                    rounded-full
+                                    transform transition-all duration-700 ease-out
+                                    ${isHovered ? 'scale-125 opacity-100' : 'scale-100 opacity-50'}
+                                `}
+                            />
+
+                            {/* Continuous pulsing ring for mobile */}
+                            <span className="absolute inset-0 rounded-full border-2 border-orange-500/30 
+                                  animate-ping opacity-40 group-hover:opacity-70 
+                                  md:hidden"></span>
+
+                            {/* Desktop-only subtle pulse */}
+                            <span className="hidden md:block absolute inset-0 rounded-full border-2 border-orange-500/20 
+                                  animate-pulse opacity-50 group-hover:opacity-80"></span>
                         </button>
                     </div>
                 </div>

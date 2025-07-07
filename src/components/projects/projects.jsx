@@ -29,6 +29,16 @@ const projectsData = [
     },
     {
         id: 3,
+        name: "Daily Todos",
+        description: "A sleek & responsive Todo app built with React, Redux Toolkit, & Tailwind CSS for efficient task management. It allows users to create, update, and delete tasks with ease, ensuring a smooth user experience.",
+        tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
+        code: "https://github.com/imSubhro/Todo",
+        demo: "https://todo-indol-seven-66.vercel.app/",
+        tools: ["Javascript", "React.js", "Redux Toolkit", "HTML", "Tailwind CSS", "API"],
+        role: "Lead Developer"
+    },
+    {
+        id: 3,
         name: "SylloGenie",
         description: "SylloGenie is a smart Flask-based web application that allows users to upload their syllabus PDFs and generates a concise, summarized PDF effortlessly. 🚀",
         tags: ["Vue.js", "Firebase", "CSS"],
@@ -131,7 +141,6 @@ const Projects = () => {
     return (
         <div id='projects' className="relative z-50 my-8 sm:my-10 md:my-12 lg:my-24 px-4 sm:px-6 md:px-8 lg:px-12">
             <div className="sticky top-6 sm:top-8 md:top-10">
-                <div className="w-[50px] sm:w-[60px] md:w-[80px] h-[50px] sm:h-[60px] md:h-[80px] bg-violet-500 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
                 <div className="flex items-center justify-start relative">
                     <span className=" bg-gradient-to-r from-orange-500 to-red-600 absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
                         PROJECTS

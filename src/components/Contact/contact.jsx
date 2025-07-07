@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Lottie from "lottie-react";
 import testanim from "../../assets/lotti/lotti.json";
 import PaperPlaneButton from "../paperPlaneButton/index.jsx";
+import { useForm } from "@formspree/react";
 
 export default function Contact() {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const subject = formData.get("subject");
-        const message = formData.get("message");
+    // TO SET UP EMAIL FUNCTIONALITY:
+    // 1. Go to https://formspree.io and create a free account
+    // 2. Create a new form and get your form ID
+    // 3. Replace "xgvekldz" below with your actual Formspree form ID
+    const [state, handleSubmit] = useForm("xjkrqgkg"); // Replace with your Formspree form ID
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-        window.location.href = `mailto:mohanta.subhro04@gmail.com?subject=${subject}&body=Hi, my name is ${name} : ${message} (${email})`;
+    const onSubmit = async (e) => {
+        setIsSubmitting(true);
+        await handleSubmit(e);
+
+        if (state.succeeded) {
+            // Reset form after successful submission
+            e.target.reset();
+            setTimeout(() => {
+                setIsSubmitting(false);
+            }, 2000);
+        } else {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -38,7 +50,19 @@ export default function Contact() {
 
                     {/* Form container */}
                     <div className="mt-12 w-full md:mt-0 md:max-w-lg">
-                        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                        {state.succeeded && (
+                            <div className="mb-4 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">
+                                Thanks for your message! I'll get back to you soon.
+                            </div>
+                        )}
+
+                        {state.errors && state.errors.length > 0 && (
+                            <div className="mb-4 p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">
+                                Oops! There was an error sending your message. Please try again.
+                            </div>
+                        )}
+
+                        <form onSubmit={onSubmit} className="flex flex-col space-y-4">
                             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                                 <input
                                     name="name"
@@ -46,6 +70,7 @@ export default function Contact() {
                                     className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="text"
                                     required
+                                    disabled={isSubmitting}
                                 />
                                 <input
                                     name="email"
@@ -53,6 +78,7 @@ export default function Contact() {
                                     className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="email"
                                     required
+                                    disabled={isSubmitting}
                                 />
                             </div>
 
@@ -62,6 +88,7 @@ export default function Contact() {
                                 className="contactInput rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 type="text"
                                 required
+                                disabled={isSubmitting}
                             />
 
                             <textarea
@@ -69,8 +96,18 @@ export default function Contact() {
                                 placeholder="Message"
                                 className="contactInput min-h-[120px] rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 required
+                                disabled={isSubmitting}
                             />
-                            <button><PaperPlaneButton /></button>
+
+                            <button
+                                type="submit"
+                                disabled={isSubmitting || state.submitting}
+                                className={`transition-all duration-300 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+                            >
+                                <div className={`transform transition-all duration-500 ${isSubmitting ? 'scale-110' : ''}`}>
+                                    <PaperPlaneButton isSubmitting={isSubmitting} />
+                                </div>
+                            </button>
 
                         </form>
                     </div>

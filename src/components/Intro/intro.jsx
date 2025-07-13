@@ -16,7 +16,7 @@ export default function Intro() {
         },
         {
             title: "Salar E.Z. High School, Murshidabad",
-            company: "Higher Secondary (WBCHSEB)",
+            company: "Higher Secondary (WBCHSE)",
             period: "Mar 2020 - April 2022",
             position: "right",
             logo: "S"
@@ -75,67 +75,49 @@ export default function Intro() {
                         <div className="h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
                     </div>
                 </div>
-                <div className="bg-gray-400 rounded-xl p-6 sm:p-10 shadow-xl">
+                <div className="bg-gray-900 rounded-xl p-6 sm:p-10 shadow-xl">
                     <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-bold text-orange-500 text-center mb-12 lg-tablet:mb-16">
                         My Journey
                     </h2>
 
                     {/* Timeline */}
                     <div className="relative max-w-4xl mx-auto">
-                        {/* Center Line */}
-                        <div className="absolute h-full w-1 bg-gray-700 left-6 lg-tablet:left-1/2 lg-tablet:transform lg-tablet:-translate-x-1/2"></div>
+                        {/* Vertical Timeline Line */}
+                        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-600"></div>
 
                         {/* Timeline Items */}
-                        {journeyData.map((item, index) => (
-                            <div key={index} className="relative mb-12 sm:mb-16 lg-tablet:mb-24">
-                                {/* Mobile & Tablet View */}
-                                <div className="lg-tablet:hidden flex">
-                                    {/* Circle Marker (Left) */}
-                                    <div className="absolute left-1 z-10">
-                                        <div className="bg-gray-900 w-10 h-10 rounded-full flex items-center justify-center border-4 border-gray-700">
-                                            <span className="text-orange-500 font-bold">{item.logo}</span>
-                                        </div>
-                                    </div>
+                        {journeyData.map((item, index) => {
+                            const colors = [
+                                { bg: 'bg-red-500', text: 'text-white' },
+                                { bg: 'bg-green-500', text: 'text-white' },
+                                { bg: 'bg-blue-500', text: 'text-white' }
+                            ];
+                            const color = colors[index % colors.length];
 
-                                    {/* Content Box (Right) */}
-                                    <div className="ml-16 w-full">
-                                        <div className="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg">
-                                            <h3 className="text-lg sm:text-xl font-bold text-white">{item.title}</h3>
-                                            <p className="text-gray-400 font-medium mt-1 text-sm sm:text-base">{item.company}</p>
-                                            <p className="text-gray-500 font-medium mt-2 text-sm sm:text-base">{item.period}</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Desktop View */}
-                                <div className="hidden lg-tablet:grid lg-tablet:grid-cols-2 gap-8 items-center">
-                                    {/* Left Side */}
-                                    <div className={`${item.position === 'left' ? 'block' : 'invisible'}`}>
-                                        <div className={`bg-gray-900 p-6 rounded-lg shadow-lg ${item.position === 'left' ? 'text-right ml-auto mr-8' : ''}`} style={{ maxWidth: "90%" }}>
-                                            <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                                            <p className="text-gray-400 font-medium mt-1">{item.company}</p>
-                                            <p className="text-gray-500 font-medium mt-2">{item.period}</p>
-                                        </div>
-                                    </div>
-
-                                    {/* Circle Marker (Center) */}
+                            return (
+                                <div key={index} className="relative mb-8 flex items-center">
+                                    {/* Timeline Circle */}
                                     <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                                        <div className="bg-gray-900 w-12 h-12 rounded-full flex items-center justify-center border-4 border-gray-700">
-                                            <span className="text-orange-500 font-bold">{item.logo}</span>
-                                        </div>
+                                        <div className={`${color.bg} w-4 h-4 rounded-full border-4 border-gray-900`}></div>
                                     </div>
 
-                                    {/* Right Side */}
-                                    <div className={`${item.position === 'right' ? 'block' : 'invisible'}`}>
-                                        <div className={`bg-gray-900 p-6 rounded-lg shadow-lg ${item.position === 'right' ? 'ml-8' : ''}`} style={{ maxWidth: "90%" }}>
-                                            <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                                            <p className="text-gray-400 font-medium mt-1">{item.company}</p>
-                                            <p className="text-gray-500 font-medium mt-2">{item.period}</p>
+                                    {/* Content Card */}
+                                    <div className={`${item.position === 'left' ? 'mr-auto pr-8' : 'ml-auto pl-8'} w-5/12`}>
+                                        <div className={`${color.bg} ${color.text} p-6 rounded-lg shadow-lg relative`}>
+                                            {/* Arrow pointing to timeline */}
+                                            <div className={`absolute top-1/2 transform -translate-y-1/2 w-0 h-0 ${item.position === 'left'
+                                                ? 'right-0 translate-x-full border-l-8 border-l-current border-t-8 border-t-transparent border-b-8 border-b-transparent'
+                                                : 'left-0 -translate-x-full border-r-8 border-r-current border-t-8 border-t-transparent border-b-8 border-b-transparent'
+                                                }`}></div>
+
+                                            <h3 className="text-lg font-bold mb-2">{item.period}</h3>
+                                            <h4 className="text-base font-semibold mb-1">{item.title}</h4>
+                                            <p className="text-sm opacity-90">{item.company}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

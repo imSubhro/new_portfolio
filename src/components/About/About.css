@@ -1,7 +1,104 @@
 @import "tailwindcss";
 
-
 @theme {
-
     --breakpoint-lg-tablet: 61.938rem;
+}
+
+/* Custom animations for the About section */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(251, 146, 60, 0.6);
+    }
+}
+
+@keyframes rotating-border {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive text adjustments */
+@media (max-width: 640px) {
+    .about-title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+}
+
+/* Custom button hover effects */
+.about-button:hover {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Smooth scrolling behavior */
+#about {
+    scroll-margin-top: 80px;
+}
+
+/* Enhanced backdrop blur for better glass effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-grid {
+        gap: 2rem;
+    }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-container {
+        padding: 2rem;
+    }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+    .about-container {
+        padding: 3rem;
+    }
 }

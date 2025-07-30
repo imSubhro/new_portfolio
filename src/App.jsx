@@ -12,6 +12,7 @@ import Contact from "./components/Contact/contact.jsx";
 import ScrollTop from "./components/Scrolltop/scroll.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Intro from "./components/Intro/intro.jsx";
+import BlobCursor from "./components/BlobCursor.jsx";
 
 const MainContain = () => {
   return (
@@ -32,6 +33,8 @@ const MainContain = () => {
 function App() {
   return (
     <Router>
+      {/* Global BlobCursor for entire website */}
+      <BlobCursor />
       <Navbar />
       <Routes>
         <Route path="/" element={<MainContain />} />

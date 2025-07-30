@@ -17,6 +17,7 @@
     "hamburger-react": "^2.5.2",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.503.0",
+    "ogl": "^1.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",

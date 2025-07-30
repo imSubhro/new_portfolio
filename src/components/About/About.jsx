@@ -27,7 +27,7 @@ export default function About() {
     }, []);
 
     return (
-        <section className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] bg-gradient-to-br from-[#1a1a1a] via-[#282828] to-[#1f1f1f] overflow-hidden" id='about'>
+        <section className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] bg-[#161616] overflow-hidden" id='about'>
             {/* Background decorative elements */}
             <div className="absolute top-0 left-0 w-full h-full">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl"></div>

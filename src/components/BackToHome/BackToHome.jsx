@@ -11,7 +11,7 @@ const BackToHome = () => {
     return (
         <div
             onClick={goToHome}
-            className=' px-18 cursor-pointer transition z-50 drop-shadow-xl hover:opacity-90  '
+            className=' px-18 py-6 cursor-pointer transition z-50 drop-shadow-xl hover:opacity-90  '
         >
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 143 143">
                 <g id="Group_17" data-name="Group 17" transform="translate(-98 -690)">

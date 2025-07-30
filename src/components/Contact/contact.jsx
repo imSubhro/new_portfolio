@@ -3,6 +3,8 @@ import Lottie from "lottie-react";
 import testanim from "../../assets/lotti/lotti.json";
 import PaperPlaneButton from "../paperPlaneButton/index.jsx";
 import { useForm } from "@formspree/react";
+import CurvedLoop from '../CurvedLoop';
+
 
 export default function Contact() {
     // TO SET UP EMAIL FUNCTIONALITY:
@@ -30,7 +32,6 @@ export default function Contact() {
     return (
         <div className="relative w-full overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-10" id="contact">
             <div className="mx-auto max-w-6xl">
-
                 <div className="flex justify-center -translate-y-[1px]">
                     <div className="w-3/4">
                         <div className="h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
@@ -39,6 +40,18 @@ export default function Contact() {
                 <h2 className=" pt-5 text-center text-3xl font-bold text-orange-500 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
                     LET'S GET IN TOUCH!
                 </h2>
+
+                {/* CurvedLoop positioned above contact details only */}
+                <div className="relative w-full max-w-4xl mx-auto mt-8 mb-6 h-16 overflow-hidden">
+                    <CurvedLoop
+                        marqueeText="NEVER STOP ✦ WORKS HARD ✦ NJOY LIFE ✦ DO MORE ✦ DREAM BIG ✦"
+                        speed={2}
+                        curveAmount={200}
+                        direction="right"
+                        interactive={true}
+                        className="text-sm text-orange-400/60"
+                    />
+                </div>
 
                 <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between md:gap-6">
                     {/* Animation container */}

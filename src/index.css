@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
 body {
-
     background-color: #161616;
     color: white;
+    cursor: none;
+    /* Hide default cursor */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll issues */
+}
+
+/* Hide cursor on all interactive elements */
+*,
+*::before,
+*::after {
+    cursor: none !important;
+}
+
+/* Ensure smooth performance for blob cursor */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

@@ -47,15 +47,22 @@ const projectsData = [
         tools: ["Python", "HTML", "Tailwind CSS"],
         role: "Lead Developer"
     },
+    {
+        id: 4,
+        name: "ByPass CTF",
+        description: "ByPass CTF is a Capture The Flag (CTF) platform designed for cybersecurity enthusiasts to practice their skills. It offers a variety of challenges in different categories, including web exploitation, reverse engineering.",
+        tags: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
+        code: "https://github.com/imSubhro/BypassCTF",
+        demo: "https:/bypassctf.vercel.app",
+        tools: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
+        role: "Backend Developer"
+    },
 
 ];
 
 // SingleProject component
 const SingleProject = ({ project }) => {
     const { name, description, tags, code, demo, tools, role } = project;
-
-
-
     return (
         <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020]  rounded-lg border border-[#D3D3D3]'>
             <div className='flex flex-col items-center justify-between w-full h-full '>

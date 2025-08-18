@@ -15,25 +15,6 @@
 
 ---
 
-## ✨ Features
-
-<div align="center">
-
-| 🎨 **Modern Design** | 📱 **Responsive** | ⚡ **Fast Loading** | 🎭 **Animations** |
-|:---:|:---:|:---:|:---:|
-| Clean & Professional UI | Mobile-First Approach | Optimized Performance | Smooth Transitions |
-
-</div>
-
-- 🌟 **Interactive Animations** - Floating particles and smooth transitions
-- 📧 **Contact Integration** - Direct email and social media links
-- 🎯 **Project Showcase** - Detailed project presentations
-- 🔧 **Skills Display** - Technology stack visualization
-- 📄 **Resume Integration** - Easy access to downloadable resume
-- 🌙 **Modern Aesthetics** - Orange/red gradient theme with dark mode design
-
----
-
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -81,34 +62,6 @@ Welcome to my personal portfolio! This repository showcases who I am, what I’v
    npm run preview
    ```
 
-
----
-
-## 🎨 Design Philosophy
-
-> **"Simplicity is the ultimate sophistication"** - Leonardo da Vinci
-
-This portfolio follows modern web design principles:
-
-- **🎯 User-Centric:** Intuitive navigation and clear information hierarchy
-- **🎨 Visual Harmony:** Consistent color palette and typography
-- **⚡ Performance First:** Optimized assets and efficient rendering
-- **📱 Mobile Ready:** Responsive design for all screen sizes
-- **♿ Accessible:** Semantic HTML and keyboard navigation support
-
----
-
-## 🌟 Key Sections
-
-| Section | Description | Highlights |
-|---------|-------------|------------|
-| **🏠 Home** | Landing page with animated introduction | Typing animation, floating particles |
-| **👨‍💻 About** | Personal background and journey | Interactive timeline, skills overview |
-| **💼 Projects** | Showcase of development work | Live demos, source code links |
-| **🛠️ Skills** | Technical expertise display | Technology logos, proficiency levels |
-| **📞 Contact** | Get in touch section | Direct email, social media links |
-
-
 ---
 
 ## 🤝 Contributing
@@ -128,10 +81,8 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subhro-mohanta/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/imSubhro)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/subhro_vk)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/just.subhro)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:subhromohanta16@gmail.com)
+
 
 **💼 Open for opportunities!** Let's build something amazing together.
 
@@ -149,7 +100,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 **⭐ Star this repository if you found it helpful!**
 
-*made with ❤️ by [Subhro Mohanta](https://imsubhro.vercel.app/)*
+*made with ❤️ by [Subhro](https://imsubhro.vercel.app/)*
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=imSubhro.new_portfolio)
 

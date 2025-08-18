@@ -6,7 +6,7 @@
 
 /* 
 /* Social Icon Animation */
-/* .flip a {
+.flip a {
     width: 60px;
     height: 60px;
     color: #22303F;
@@ -45,7 +45,7 @@ a:nth-child(3):hover {
 
 a:nth-child(4):hover {
     transition: 0.10s;
-} */
+}
 
 
 /* home.css */

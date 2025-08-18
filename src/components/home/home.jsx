@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa"; // Added for resume icon
 import LightRays from '../LightRays';
 import BlobCursor from '../BlobCursor';
-
+// import Ribbons from './Ribbons';
 
 // Add document head for favicon
 import { Helmet } from "react-helmet";
@@ -27,7 +27,7 @@ export default function home() {
   const [resumeVisible, setResumeVisible] = useState(false);
 
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1YCGTfEu-wlKhGz01-NbYiVpZfUgucGI4/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1bZzMDpKTPBdYOsrmkPLyG8r-U4DzwcZH/view?usp=sharing", "_blank");
   };
 
   useEffect(() => {
@@ -82,6 +82,16 @@ export default function home() {
         slowDuration={0.5}
         zIndex={100}
       />
+
+      {/* <Ribbons
+        baseThickness={30}
+        colors={['#ffffff']}
+        speedMultiplier={0.5}
+        maxAge={500}
+        enableFade={false}
+        enableShaderEffect={true}
+      /> */}
+
       {/* Add favicon */}
       <Helmet>
         <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16" />
@@ -102,7 +112,6 @@ export default function home() {
                 alt="Subhro's_Profile_Picture"
                 className=" "
               />
-
             </div>
           </div>
 

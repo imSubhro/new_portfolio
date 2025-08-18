@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Khelratna is a comprehensive platform designed for local cricket tournaments, offering real-time scoring, match management, and daily live streaming. Built to simplify the organization of grassroots cricket.",
+        description: "Developed a Microservices based full-stack web app with Next.js and Flask, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 20+ live match  .",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         code: "https://github.com/yourusername/open-course",
         demo: "https://opencourse.com",

@@ -13,6 +13,8 @@ import ScrollTop from "./components/Scrolltop/scroll.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Intro from "./components/Intro/intro.jsx";
 import BlobCursor from "./components/BlobCursor.jsx";
+// import Ribbons from "./components/home/Ribbons.jsx";
+
 
 const MainContain = () => {
   return (
@@ -35,6 +37,7 @@ function App() {
     <Router>
       {/* Global BlobCursor for entire website */}
       <BlobCursor />
+      {/* <Ribbons /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<MainContain />} />

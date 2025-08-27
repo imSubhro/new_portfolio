@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-// import background from '../../assets/image/about.jpeg';
 import { useNavigate } from 'react-router-dom';
+import '../../styles/fonts.css'; // Import the font definitions
 
 
 export default function About() {
@@ -44,29 +44,29 @@ export default function About() {
                                 }`}
                         >
                             <div className="space-y-4">
-                                <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text leading-tight'>
+                                <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-technor font-[700] text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text leading-tight'>
                                     Who Am I...
                                 </h2>
                                 <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
                             </div>
 
                             <div className="space-y-4">
-                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light">
-                                    Hey! I'm <span className="text-orange-400 font-medium">Subhro</span>, a curious and driven Computer Science student based in Kolkata.
+                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed font-supreme">
+                                    Hey! I'm <span className="text-orange-400 ">Subhro</span>, a curious and driven Computer Science student based in Kolkata.
                                 </p>
-                                <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
+                                <p className='font-supreme text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed'>
                                     I'm someone who genuinely enjoys learning, solving problems, and exploring how technology can improve everyday life.
                                 </p>
                             </div>
 
                             {/* Additional info cards for desktop */}
                             <div className="hidden md:flex space-x-4 mt-8">
-                                <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-orange-500/20">
-                                    <p className="text-orange-400 text-sm font-medium">Location</p>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 font-supreme border border-orange-500/20">
+                                    <p className="text-orange-400 text-sm ">Location</p>
                                     <p className="text-gray-300 text-xs">Kolkata, India</p>
                                 </div>
-                                <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-orange-500/20">
-                                    <p className="text-orange-400 text-sm font-medium">Field</p>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 font-supreme border border-orange-500/20">
+                                    <p className="text-orange-400 text-sm ">Field</p>
                                     <p className="text-gray-300 text-xs">Computer Science</p>
                                 </div>
                             </div>
@@ -102,11 +102,11 @@ export default function About() {
                                     onClick={handleExploreClick}
                                 >
                                     <div className="relative z-10 text-center transition-all duration-300">
-                                        <span className={`text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 ${isHovered ? 'transform scale-110' : ''}`}>
+                                        <span className={`text-sm sm:text-base md:text-lg font-technor font-[700] transition-all duration-300 ${isHovered ? 'transform scale-110' : ''}`}>
                                             More
                                         </span>
                                         <br />
-                                        <span className={`text-xs sm:text-sm md:text-base font-medium text-gray-300 transition-all duration-300 ${isHovered ? 'transform scale-110 text-orange-200' : ''}`}>
+                                        <span className={`text-xs sm:text-sm md:text-base font-technor text-gray-300 transition-all duration-300 ${isHovered ? 'transform scale-110 text-orange-200' : ''}`}>
                                             About Me
                                         </span>
                                     </div>

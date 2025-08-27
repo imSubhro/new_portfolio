@@ -37,12 +37,12 @@ export default function Contact() {
                         <div className="h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent  w-full" />
                     </div>
                 </div>
-                <h2 className=" pt-5 text-center text-3xl font-bold text-orange-500 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
+                <h2 className=" pt-5 text-center text-3xl font-technor font-[700] text-orange-500 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-[10px] xl:text-7xl xl:tracking-[14px]">
                     LET'S GET IN TOUCH!
                 </h2>
 
                 {/* CurvedLoop positioned above contact details only */}
-                <div className="relative w-full max-w-4xl mx-auto mt-8 mb-6 h-16 overflow-hidden">
+                {/* <div className="relative w-full max-w-4xl mx-auto mt-8 mb-6 h-16 overflow-hidden">
                     <CurvedLoop
                         marqueeText="NEVER STOP ✦ WORKS HARD ✦ NJOY LIFE ✦ DO MORE ✦ DREAM BIG ✦"
                         speed={2}
@@ -51,7 +51,7 @@ export default function Contact() {
                         interactive={true}
                         className="text-sm text-orange-400/60"
                     />
-                </div>
+                </div> */}
 
                 <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between md:gap-6">
                     {/* Animation container */}
@@ -64,13 +64,13 @@ export default function Contact() {
                     {/* Form container */}
                     <div className="mt-12 w-full md:mt-0 md:max-w-lg">
                         {state.succeeded && (
-                            <div className="mb-4 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">
+                            <div className=" font-technor font-[600] mb-4 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">
                                 Thanks for your message! I'll get back to you soon.
                             </div>
                         )}
 
                         {state.errors && state.errors.length > 0 && (
-                            <div className="mb-4 p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">
+                            <div className=" font-technor font-[600] mb-4 p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">
                                 Oops! There was an error sending your message. Please try again.
                             </div>
                         )}
@@ -80,7 +80,7 @@ export default function Contact() {
                                 <input
                                     name="name"
                                     placeholder="Name"
-                                    className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
+                                    className=" font-supreme font-[600] contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="text"
                                     required
                                     disabled={isSubmitting}
@@ -88,7 +88,7 @@ export default function Contact() {
                                 <input
                                     name="email"
                                     placeholder="Email"
-                                    className="contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
+                                    className=" font-supreme font-[600] contactInput flex-1 rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                     type="email"
                                     required
                                     disabled={isSubmitting}
@@ -98,7 +98,7 @@ export default function Contact() {
                             <input
                                 name="subject"
                                 placeholder="Subject"
-                                className="contactInput rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
+                                className=" font-supreme font-[600] contactInput rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 type="text"
                                 required
                                 disabled={isSubmitting}
@@ -107,7 +107,7 @@ export default function Contact() {
                             <textarea
                                 name="message"
                                 placeholder="Message"
-                                className="contactInput min-h-[120px] rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
+                                className=" font-supreme font-[600] contactInput min-h-[120px] rounded-sm border-b border-[#FF6200] bg-slate-400/10 px-4 py-3 text-gray-400 placeholder-gray-500 outline-none transition-all focus:border-[#FF6200]/70 focus:text-gray-300 hover:border-[#FF6200]/40"
                                 required
                                 disabled={isSubmitting}
                             />
@@ -115,7 +115,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting || state.submitting}
-                                className={`transition-all duration-300 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+                                className={` font-technor font-[600] transition-all duration-300 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
                             >
                                 <div className={`transform transition-all duration-500 ${isSubmitting ? 'scale-110' : ''}`}>
                                     <PaperPlaneButton isSubmitting={isSubmitting} />

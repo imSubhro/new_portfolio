@@ -132,7 +132,7 @@ export default function Navbar() {
         />
       </div>
 
-      <div className="relative z-50 pt-8 pl-15 pr-15">
+      <div className="relative z-50 pt-8 pl-15 pr-15 font-technor font-[600]">
         <div className={`border border-orange-500 flex justify-between items-center p-4 rounded-3xl relative z-50 transition-all duration-300 ${scrolled ? 'bg-[#161616]  backdrop-blur-sm' : ''}`}>
           {/* Logo */}
           <div className="group">

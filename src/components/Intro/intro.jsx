@@ -43,23 +43,23 @@ export default function Intro() {
                             alt="About Me"
                             className="w-full max-w-md rounded-lg "
                         />
-                        <p className="text-gray-400 font-semibold mt-4 text-center">
+                        <p className="text-gray-400 font-technor font-[600] mt-4 text-center">
                             <span className="text-orange-500 font-bold">एक</span> Developer
                         </p>
                     </div>
 
                     <div className="mt-8 lg-tablet:mt-0">
-                        <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-bold text-orange-500 mb-6">
+                        <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-technor font-[700] text-orange-500 mb-6">
                             About Me
                         </h2>
                         <div className="space-y-4 p-2">
-                            <p className="text-base sm:text-lg text-gray-300">
+                            <p className="text-base sm:text-lg font-supreme font-[600] text-gray-300">
                                 Hey! I'm Subhro Mohanta, a curious and driven Computer Science student based in Kolkata. I'm someone who genuinely enjoys learning, solving problems, and exploring how technology can improve everyday life. Whether it's diving into the world of AI or building something cool with code, I love the creative process behind tech.
                             </p>
-                            <p className="text-base sm:text-lg text-gray-400">
+                            <p className="text-base sm:text-lg font-supreme font-[600] text-gray-400">
                                 I'm also a strong believer in community and collaboration —I've led technical workshops, mentored peers, and enjoy being part of a team that builds and grows together. Outside of tech, I'm passionate about cricket, leading my college team with the same energy and focus I bring to coding.
                             </p>
-                            <p className="text-base sm:text-lg text-gray-300">
+                            <p className="text-base sm:text-lg font-supreme font-[600] text-gray-300">
                                 I'm constantly evolving, and I'm always up for a good challenge and meaningful conversation.
                             </p>
                         </div>
@@ -76,12 +76,12 @@ export default function Intro() {
                     </div>
                 </div>
                 <div className="bg-gray-900 rounded-xl p-6 sm:p-10 shadow-xl">
-                    <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-bold text-orange-500 text-center mb-12 lg-tablet:mb-16">
+                    <h2 className="text-3xl sm:text-4xl lg-tablet:text-5xl font-technor font-[700] text-orange-500 text-center mb-12 lg-tablet:mb-16">
                         My Journey
                     </h2>
 
                     {/* Timeline */}
-                    <div className="relative max-w-4xl mx-auto">
+                    <div className="relative max-w-4xl mx-auto font-supreme font-[600]">
                         {/* Vertical Timeline Line */}
                         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-600"></div>
 

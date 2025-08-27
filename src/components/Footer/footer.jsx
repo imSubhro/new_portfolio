@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className=" w-full h-[2.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+            <div className=" w-full h-[2.5px] font-supreme font-[600] bg-gradient-to-r from-transparent via-orange-500 to-transparent">
 
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col items-center">
@@ -16,13 +16,13 @@ export default function Footer() {
                             <p>Developed with passion❤️, caffeine☕, and just a touch of madness. Enjoy the chaos!😜 </p>
                         </div>
                         <div className="flex  ">
-                            <a href="https://github.com/imSubhro" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-orange-500">
+                            <a href="https://github.com/imSubhro" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-orange-500" target='_blank'>
                                 <FaGithub className="text-3xl " />
                             </a>
-                            <a href="https://www.linkedin.com/in/subhro-mohanta" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-blue-500">
+                            <a href="https://www.linkedin.com/in/subhro-mohanta" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-blue-500" target='_blank'>
                                 <FaLinkedin className="text-3xl " />
                             </a>
-                            <a href="https://x.com/subhro_vk" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-blue-600">
+                            <a href="https://x.com/subhro_vk" className="hover-float w-12 h-12 md:w-14 md:h-14 icon hover:text-blue-600" target='_blank'>
                                 <FaXTwitter className="text-3xl " />
                             </a>
                         </div>

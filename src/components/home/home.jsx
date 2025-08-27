@@ -117,12 +117,12 @@ export default function home() {
 
           {/* Content column */}
           <div className="flex flex-col justify-center items-start order-2 lg:order-1 px-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-300">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-technor font-[700] text-gray-300">
               Hello There! Subhro Here!
             </h1>
 
             {/* Typing effect text */}
-            <div className="h-16 md:h-20 text-xl md:text-2xl mt-4 text-gray-600">
+            <div className="h-16 md:h-20 text-xl md:text-2xl mt-4 font-supreme font-[500] text-gray-600">
               <div className="typing-animation">
                 {text}
                 <span className="cursor">|</span>
@@ -134,7 +134,7 @@ export default function home() {
               <button
                 onClick={() => window.location.href = 'mailto:subhromohanta16@gmail.com?subject=Work Opportunity&body=Hi Subhro, I would like to discuss a work opportunity with you.'}
                 className="w-full sm:w-52 h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
-                <span className="relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
+                <span className="font-technor font-[600] relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
                   Work with Me
                 </span>
                 <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
@@ -142,7 +142,7 @@ export default function home() {
 
               <button
                 onClick={handleResumeClick}
-                className="w-full sm:w-auto cursor-pointer font-bold text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center justify-center px-4 py-2 rounded"
+                className="w-full sm:w-auto cursor-pointer font-technor font-[600] text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center justify-center px-4 py-2 rounded"
               >
                 <FaFileAlt className="mr-2" /> View Resume
               </button>

@@ -1,10 +1,16 @@
 @import "tailwindcss";
+/* @import './styles/fonts.css'; */
+
+/* :root {
+  --font-supreme: 'Supreme', sans-serif;
+  --font-technor: 'Technor', sans-serif;
+} */
 
 body {
     background-color: #161616;
     color: white;
     cursor: none;
-    /* Hide default cursor */
+    /* font-family: 'Supreme', sans-serif; */
     overflow-x: hidden;
     /* Prevent horizontal scroll issues */
 }

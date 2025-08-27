@@ -72,7 +72,7 @@ export default function IntroductionComponent() {
                     variants={slideUp}
                     initial="initial"
                     exit="exit"
-                    className="introduction"
+                    className="introduction font-technor font-[600]"
                 >
                     <motion.p
                         variants={opacity}

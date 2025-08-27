@@ -98,7 +98,7 @@ export default function Skills() {
     return (
 
         <>
-            <div className="py-12 overflow-hidden" id="skills">
+            <div className="font-technor py-12 overflow-hidden" id="skills">
 
                 <div className="flex justify-center -translate-y-[1px]">
                     <div className="w-3/4">

@@ -76,7 +76,7 @@ const SingleProject = ({ project }) => {
                     </div>
 
                     {/* Centered name */}
-                    <h2 className='text-[#EFF3F4] font-semibold text-base sm:text-lg md:text-xl lg:text-2xl leading-[110%] capitalize mb-2 mx-auto'>
+                    <h2 className='text-[#EFF3F4] font-technor font-[700] text-base sm:text-lg md:text-xl lg:text-2xl leading-[110%] capitalize mb-2 mx-auto'>
                         {name}
                     </h2>
                 </div>
@@ -86,25 +86,25 @@ const SingleProject = ({ project }) => {
                 <div className="bg-background py-5 pl-6  border-t  border-orange-500 ">
 
                     <div className="blink">
-                        <span className="mr-2 text-white">const</span>
-                        <span className="mr-2 text-orange-400 font-semibold ">project</span>
-                        <span className="mr-2 text-white">=</span>
-                        <span className="text-gray-200">{'{'}</span>
+                        <span className="mr-2 text-white font-technor font-[600]">const</span>
+                        <span className="mr-2 text-orange-400 font-technor font-[600] ">project</span>
+                        <span className="mr-2 text-white font-technor font-[600]">=</span>
+                        <span className="text-gray-200 font-technor font-[600]">{'{'}</span>
                     </div>
                     <div className="w-full px-4 py-3 flex flex-col gap-2">
                         <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base">
-                            <span className="font-bold text-orange-400 underline underline-offset-2">myRole:</span> {role}
+                            <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">myRole:</span> {role}
                         </p>
 
                         <div>
-                            <p className="text-orange-400 text-xs sm:text-sm md:text-base font-bold mb-1.5 underline underline-offset-2">
+                            <p className="text-orange-400 text-xs sm:text-sm md:text-base font-technor font-[600] mb-1.5 underline underline-offset-2">
                                 Tech Stack:
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {tools.map((tool, idx) => (
                                     <span
                                         key={idx}
-                                        className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs"
+                                        className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs font-supreme font-[600]"
                                     >
                                         {tool}
                                     </span>
@@ -112,10 +112,10 @@ const SingleProject = ({ project }) => {
                             </div>
                         </div>
 
-                        <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2">
-                            <span className="font-bold text-orange-400 underline underline-offset-2">Description:</span> {description}
+                        <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2 font-supreme font-[600]">
+                            <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">Description:</span> {description}
                         </p>
-                        <div><span className="text-gray-200">{`};`}</span></div>
+                        <div><span className="text-gray-200 font-technor font-[600]">{`};`}</span></div>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@ const Projects = () => {
         <div id='projects' className="relative z-50 my-8 sm:my-10 md:my-12 lg:my-24 px-4 sm:px-6 md:px-8 lg:px-12">
             <div className="sticky top-6 sm:top-8 md:top-10">
                 <div className="flex items-center justify-start relative">
-                    <span className=" bg-gradient-to-r from-orange-500 to-red-600 absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
+                    <span className="font-technor bg-gradient-to-r from-orange-500 to-red-600 absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
                         PROJECTS
                     </span>
                     <span className="w-full h-[2.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent "></span>

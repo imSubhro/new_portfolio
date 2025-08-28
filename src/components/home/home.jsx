@@ -131,14 +131,28 @@ export default function home() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-              <button
-                onClick={() => window.location.href = 'mailto:subhromohanta16@gmail.com?subject=Work Opportunity&body=Hi Subhro, I would like to discuss a work opportunity with you.'}
-                className="w-full sm:w-52 h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group">
-                <span className="font-technor font-[600] relative z-10 group-hover:text-orange-500 transition-colors duration-300 flex items-center justify-center">
-                  Work with Me
-                </span>
-                <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-              </button>
+              <form 
+                action="mailto:subhromohanta16@gmail.com" 
+                method="GET"
+                className="w-full sm:w-52"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const subject = 'Work Opportunity';
+                  const body = 'Hi Subhro, I would like to discuss a work opportunity with you.';
+                  window.location.href = `mailto:subhromohanta16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  return false;
+                }}
+              >
+                <button
+                  type="submit"
+                  className="w-full h-14 border border-orange-400 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium cursor-pointer relative overflow-hidden group flex items-center justify-center"
+                >
+                  <span className="font-technor font-[600] relative z-10 group-hover:text-orange-500 transition-colors duration-300">
+                    Work with Me
+                  </span>
+                  <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                </button>
+              </form>
 
               <button
                 onClick={handleResumeClick}
@@ -168,16 +182,16 @@ export default function home() {
             {/* Social icons - made responsive */}
             <div className="social-icons w-full mt-6">
               <div className="flip flex justify-start gap-4 items-center ">
-                <a href="https://github.com/imSubhro" className="transform transition-transform hover:scale-110">
+                <a href="https://github.com/imSubhro" className="transform transition-transform hover:scale-110" target='_blank'>
                   <FaGithub className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-orange-500" />
                 </a>
-                <a href="https://www.linkedin.com/in/subhro-mohanta/" className="transform transition-transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/subhro-mohanta/" className="transform transition-transform hover:scale-110" target='_blank'>
                   <TbBrandLinkedinFilled className="w-8 h-8 md:w-10 md:h-10 icon text-blue-700 hover:text-blue-500" />
                 </a>
-                <a href="https://x.com/subhro_vk" className="transform transition-transform hover:scale-110">
+                <a href="https://x.com/subhro_vk" className="transform transition-transform hover:scale-110" target='_blank'>
                   <FaXTwitter className="w-8 h-8 md:w-10 md:h-10 icon text-gray-500 hover:text-blue-500" />
                 </a>
-                <a href="https://www.instagram.com/just.subhro?igsh=MTcycm43Nzc5NTlneg==" className="transform transition-transform hover:scale-110">
+                <a href="https://www.instagram.com/just.subhro?igsh=MTcycm43Nzc5NTlneg==" className="transform transition-transform hover:scale-110" target='_blank'>
                   <FaInstagram className="w-8 h-8 md:w-10 md:h-10 icon text-pink-600 hover:text-pink-700" />
                 </a>
               </div>

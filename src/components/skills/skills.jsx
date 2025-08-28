@@ -3,6 +3,7 @@ import { useState } from "react";
 import python from "../../assets/image/logos/python.svg";
 import c from "../../assets/image/logos/c.svg";
 import Cplus from "../../assets/image/logos/c++.png";
+import GO from "../../assets/image/logos/go.png";
 import html from "../../assets/image/logos/html.svg";
 import css from "../../assets/image/logos/css.svg";
 import js from "../../assets/image/logos/javascript.svg";
@@ -38,6 +39,8 @@ import git from "../../assets/image/logos/git.svg";
 import github from "../../assets/image/logos/github.png";
 import vscode from "../../assets/image/logos/vscode.svg";
 import figma from "../../assets/image/logos/figma.png";
+import nginx from "../../assets/image/logos/nginx.svg";
+import redis from "../../assets/image/logos/redis.svg";
 
 
 
@@ -54,6 +57,7 @@ export default function Skills() {
         { src: python, alt: "Python" },
         { src: c, alt: "C" },
         { src: Cplus, alt: "C++" },
+        { src: GO, alt: "GO" },
         { src: html, alt: "HTML" },
         { src: css, alt: "CSS" },
         { src: js, alt: "JavaScript" },
@@ -69,6 +73,8 @@ export default function Skills() {
         { src: postgresql, alt: "PostgreSQL" },
         { src: mongodb, alt: "MongoDB" },
         { src: supabase, alt: "Supabase" },
+        { src: nginx, alt: "Nginx" },
+        { src: redis, alt: "Redis" },
         { src: firebase, alt: "Firebase" },
         { src: docker, alt: "Docker" },
         { src: numpy, alt: "Numpy" },

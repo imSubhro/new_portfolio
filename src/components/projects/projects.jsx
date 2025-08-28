@@ -92,7 +92,7 @@ const SingleProject = ({ project }) => {
                         <span className="text-gray-200 font-technor font-[600]">{'{'}</span>
                     </div>
                     <div className="w-full px-4 py-3 flex flex-col gap-2">
-                        <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base">
+                        <p className="text-[#EFF3F4] font-supreme font-[600] text-xs sm:text-sm md:text-base">
                             <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">myRole:</span> {role}
                         </p>
 

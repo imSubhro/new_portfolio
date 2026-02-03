@@ -24,7 +24,7 @@ const MainContain = () => {
       <About />
       <Skills />
       <Projects />
-      {/* <Experience /> */}
+      <Experience />
       <Contact />
       <ScrollTop />
       <Footer />

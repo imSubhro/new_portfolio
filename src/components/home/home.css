@@ -1,24 +1,73 @@
 @import "tailwindcss";
 
 @theme {
+    --breakpoint-xs: 20rem;
+    /* 320px */
+    --breakpoint-sm: 40rem;
+    /* 640px */
+    --breakpoint-md: 48rem;
+    /* 768px */
+    --breakpoint-lg: 64rem;
+    /* 1024px */
+    --breakpoint-xl: 80rem;
+    /* 1280px */
+    --breakpoint-2xl: 96rem;
+    /* 1536px */
     --breakpoint-lg-tablet: 61.938rem;
 }
 
-/* 
+/* Home section base styles */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Social Icon Animation */
 .flip a {
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     color: #22303F;
     border-radius: 50%;
-    font-size: 35px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    line-height: 62px;
+    line-height: 46px;
     text-align: center;
     overflow: hidden;
+}
+
+/* Responsive social icon sizes */
+@media (min-width: 640px) {
+    .flip a {
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+        line-height: 52px;
+    }
+}
+
+@media (min-width: 768px) {
+    .flip a {
+        width: 55px;
+        height: 55px;
+        font-size: 35px;
+        line-height: 57px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .flip a {
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+        line-height: 62px;
+    }
 }
 
 .flip a .icon {
@@ -31,22 +80,12 @@
     transform: rotateY(180deg);
 }
 
-a:nth-child(1):hover {
-    transition: 0.10s;
-}
-
-a:nth-child(2):hover {
-    transition: 0.10s;
-}
-
-a:nth-child(3):hover {
-    transition: 0.10s;
-}
-
+a:nth-child(1):hover,
+a:nth-child(2):hover,
+a:nth-child(3):hover,
 a:nth-child(4):hover {
     transition: 0.10s;
 }
-
 
 /* home.css */
 
@@ -67,6 +106,13 @@ a:nth-child(4):hover {
     }
 }
 
+/* Typing animation responsive text */
+.typing-animation {
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.4;
+}
+
 /* Social Icons animation */
 .icon {
     transition: all 0.3s ease;
@@ -76,10 +122,51 @@ a:nth-child(4):hover {
     transform: translateY(-5px);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Responsive adjustments for extra small devices (320px and below) */
+@media (max-width: 320px) {
+    .typing-animation {
+        min-height: 4rem;
+        font-size: 0.875rem;
+    }
+
+    #home h1 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Small mobile devices */
+@media (min-width: 321px) and (max-width: 480px) {
+    .typing-animation {
+        min-height: 3.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile devices */
+@media (min-width: 481px) and (max-width: 640px) {
     .typing-animation {
         min-height: 3rem;
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 641px) and (max-width: 768px) {
+    .typing-animation {
+        min-height: 3.5rem;
+    }
+}
+
+/* Large tablet and small desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .typing-animation {
+        min-height: 4rem;
+    }
+}
+
+/* Desktop and above */
+@media (min-width: 1025px) {
+    .typing-animation {
+        min-height: 5rem;
     }
 }
 
@@ -112,4 +199,37 @@ img.rounded-full:hover {
 
 .fixed {
     animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    #home {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+}
+
+/* Landscape mode adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    #home {
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #home>div {
+        min-height: auto;
+    }
+}
+
+/* Very large screens (4K and above) */
+@media (min-width: 2560px) {
+    #home h1 {
+        font-size: 4rem;
+    }
+
+    .typing-animation {
+        font-size: 2rem;
+        min-height: 6rem;
+    }
 }

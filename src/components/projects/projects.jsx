@@ -10,10 +10,10 @@ const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Developed a Microservices based full-stack web app with Next.js and Flask, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 20+ live match  .",
+        description: "Developed a Microservices based full-stack web app with Next.js and Flask, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 40+ live match  .",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
-        code: "https://github.com/yourusername/open-course",
-        demo: "https://opencourse.com",
+        code: "https://github.com/khelratna",
+        demo: "https://play.google.com/store/apps/details?id=com.khelratna.app&pcampaignid=web_share",
         tools: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         role: "Full Stack Developer"
     },
@@ -56,6 +56,16 @@ const projectsData = [
         demo: "https:/bypassctf.vercel.app",
         tools: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
         role: "Backend Developer"
+    },
+    {
+        id: 5,
+        name: "BlogApp",
+        description: "A modern Laravel blog platform empowering users to write, manage, and track their posts seamlessly. Featuring user authentication, rich text editing, and analytics for an enhanced blogging experience.",
+        tags: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
+        code: "https://github.com/imSubhro/BlogApp",
+        demo: "https://blogapp-qe03.onrender.com/",
+        tools: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
+        role: "Lead Developer"
     },
 
 ];

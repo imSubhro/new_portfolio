@@ -7,8 +7,10 @@ import GO from "../../assets/image/logos/go.png";
 import html from "../../assets/image/logos/html.svg";
 import css from "../../assets/image/logos/css.svg";
 import js from "../../assets/image/logos/javascript.svg";
+import php from "../../assets/image/logos/php.png";
 import react from "../../assets/image/logos/react.webp";
 import vite from "../../assets/image/logos/vite.svg";
+import laravel from "../../assets/image/logos/laravel.png";
 import flask from "../../assets/image/logos/flask.png";
 import django from "../../assets/image/logos/django.svg";
 import tailwind from "../../assets/image/logos/tailwind.png";
@@ -61,6 +63,8 @@ export default function Skills() {
         { src: html, alt: "HTML" },
         { src: css, alt: "CSS" },
         { src: js, alt: "JavaScript" },
+        { src: php, alt: "PHP" },
+        { src: laravel, alt: "Laravel" },
         { src: react, alt: "React" },
         { src: vite, alt: "Vite" },
         { src: flask, alt: "Flask" },

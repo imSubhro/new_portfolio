@@ -4,7 +4,7 @@ import Mine from "../../assets/image/me.png";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWordpress } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa"; // Added for resume icon
 import LightRays from '../LightRays';
 import BlobCursor from '../BlobCursor';
@@ -27,7 +27,7 @@ export default function home() {
   const [resumeVisible, setResumeVisible] = useState(false);
 
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1bZzMDpKTPBdYOsrmkPLyG8r-U4DzwcZH/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1kanQNVA0J0skCEU64dplOE_u4JtFtblK/view?usp=sharing", "_blank");
   };
 
   useEffect(() => {
@@ -186,6 +186,9 @@ export default function home() {
                 </a>
                 <a href="https://www.instagram.com/just.subhro?igsh=MTcycm43Nzc5NTlneg==" className="transform transition-transform hover:scale-110" target='_blank' rel="noopener noreferrer">
                   <FaInstagram className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 icon text-pink-600 hover:text-pink-700" />
+                </a>
+                <a href="https://subhromohanta.wordpress.com/" className="transform transition-transform hover:scale-110" target='_blank' rel="noopener noreferrer">
+                  <FaWordpress className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 icon text-blue-500 hover:text-blue-500" />
                 </a>
               </div>
             </div>

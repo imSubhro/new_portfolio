@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Developed a Microservices based full-stack web app with Next.js and Flask, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 40+ live match  .",
+        description: "Developed a Microservices based full-stack web app with Next.js and FastAPI, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 40+ live match  .",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         code: "https://github.com/khelratna",
         demo: "https://play.google.com/store/apps/details?id=com.khelratna.app&pcampaignid=web_share",

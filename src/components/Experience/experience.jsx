@@ -8,6 +8,19 @@ const experienceData = [
     {
         id: 1,
         role: "Frontend Developer",
+        company: "Cputek Pvt. Ltd.",
+        location: "Hybrid",
+        duration: "May 2026 - Present",
+        type: "Internship",
+        description: [
+            "Wrote frontend for static website using Next.js, React, JavaScript, Tailwind CSS.",
+        ],
+        techStack: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+        // achievement: "Awwwards Nominated"
+    },
+    {
+        id: 2,
+        role: "Frontend Developer",
         company: "BITS2BYTES Techfest 2025 & IMPULSE Cultural Fest 2025",
         location: "Remote",
         duration: "June 2025 - Sept 2025",
@@ -71,7 +84,7 @@ const ExperienceCard = ({ experience, isLast }) => {
                             </h3>
                             <div className="flex flex-wrap items-center gap-2 text-gray-400">
                                 <span className="font-supreme font-[500] text-sm sm:text-base">{company}</span>
-                                <span className="text-orange-500">•</span>
+                                {/* <span className="text-orange-500">•</span> */}
                                 <span className="flex items-center gap-1 text-sm">
                                     <FaMapMarkerAlt className="text-orange-500 text-xs" />
                                     {location}

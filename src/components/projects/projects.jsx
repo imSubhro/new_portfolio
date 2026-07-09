@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Developed a Microservices based full-stack web app with Next.js and FastAPI, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 250+ active users across 40+ live match  .",
+        description: "Developed a Microservices based Cricket Scoring App with Next.js and FastAPI, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 300+ active users across 40+ live match  .",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         code: "https://github.com/khelratna",
         demo: "https://play.google.com/store/apps/details?id=com.khelratna.app&pcampaignid=web_share",
@@ -19,34 +19,34 @@ const projectsData = [
     },
     {
         id: 2,
-        name: "WeatherVista",
-        description: "This is a web app developed using React.js ⚛️. It allows users to search for the weather conditions of any city in the world and provides real-time weather updates. The app fetches data from the SheCodes Weather API 🌐.",
-        tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
-        code: "https://github.com/imSubhro/WeatherVista",
-        demo: "https://weather-app-c366.onrender.com/",
-        tools: ["Javascript", "React.js", "HTML", "Tailwind CSS", "API"],
+        name: "StreamSphere",
+        description: "A Real-time Meeting Platform, designed and developed an end-to-end real-time streaming solution with live video, interactive chat, and session management, enabling low-latency communication for concurrent users.",
+        tags: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
+        code: "https://github.com/imSubhro/StreamSphere",
+        demo: "https://streamsphere-iota.vercel.app/",
+        tools: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
         role: "Lead Developer"
     },
-    {
-        id: 3,
-        name: "Daily Todos",
-        description: "A sleek & responsive Todo app built with React, Redux Toolkit, & Tailwind CSS for efficient task management. It allows users to create, update, and delete tasks with ease, ensuring a smooth user experience.",
-        tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
-        code: "https://github.com/imSubhro/Todo",
-        demo: "https://todo-indol-seven-66.vercel.app/",
-        tools: ["Javascript", "React.js", "Redux Toolkit", "HTML", "Tailwind CSS", "API"],
-        role: "Lead Developer"
-    },
-    {
-        id: 3,
-        name: "SylloGenie",
-        description: "SylloGenie is a smart Flask-based web application that allows users to upload their syllabus PDFs and generates a concise, summarized PDF effortlessly. 🚀",
-        tags: ["Vue.js", "Firebase", "CSS"],
-        code: "https://github.com/imSubhro/SylloGenie",
-        demo: "https://pdfsummary-uwt7.onrender.com/",
-        tools: ["Python", "HTML", "Tailwind CSS"],
-        role: "Lead Developer"
-    },
+    // {
+    //     id: 3,
+    //     name: "Daily Todos",
+    //     description: "A sleek & responsive Todo app built with React, Redux Toolkit, & Tailwind CSS for efficient task management. It allows users to create, update, and delete tasks with ease, ensuring a smooth user experience.",
+    //     tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
+    //     code: "https://github.com/imSubhro/Todo",
+    //     demo: "https://todo-indol-seven-66.vercel.app/",
+    //     tools: ["Javascript", "React.js", "Redux Toolkit", "HTML", "Tailwind CSS", "API"],
+    //     role: "Lead Developer"
+    // },
+    // {
+    //     id: 3,
+    //     name: "SylloGenie",
+    //     description: "SylloGenie is a smart Flask-based web application that allows users to upload their syllabus PDFs and generates a concise, summarized PDF effortlessly. 🚀",
+    //     tags: ["Vue.js", "Firebase", "CSS"],
+    //     code: "https://github.com/imSubhro/SylloGenie",
+    //     demo: "https://pdfsummary-uwt7.onrender.com/",
+    //     tools: ["Python", "HTML", "Tailwind CSS"],
+    //     role: "Lead Developer"
+    // },
     {
         id: 4,
         name: "ByPass CTF",

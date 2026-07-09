@@ -5,21 +5,37 @@ import './experience.css';
 
 // Experience data
 const experienceData = [
+
     {
         id: 1,
-        role: "Frontend Developer",
-        company: "Cputek Pvt. Ltd.",
-        location: "Hybrid",
-        duration: "May 2026 - Present",
+        role: "MERN Stack Developer Intern",
+        company: "Wyreflow Technologies",
+        location: "Remote",
+        duration: "June 2026 - Present",
         type: "Internship",
         description: [
-            "Wrote frontend for static website using Next.js, React, JavaScript, Tailwind CSS.",
+            "Engineered full-stack solutions using the MERN stack, designing scalable backend services, RESTful APIs, authentication workflows, and MongoDB database architectures while building responsive & reusable React.js user interfaces.",
+            "Optimized application performance & system reliability by delivering production-ready features, enhancing database operations,refining backend workflows, and resolving complex technical challenges throughout the software developmentlifecycle",
         ],
-        techStack: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+        techStack: ["Node.js", "Express.js", "MongoDB", "React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "Git", "GitHub Actions", "Docker"],
         // achievement: "Awwwards Nominated"
     },
     {
         id: 2,
+        role: "Frontend Developer Intern",
+        company: "Cputek Pvt. Ltd.",
+        location: "Hybrid",
+        duration: "May 2026 - June 2026",
+        type: "Internship",
+        description: [
+            "Developed end-to-end enterprise solutions using Node.js, React.js, and modern React Hooks, building reusable UI components, REST API integrations, and optimized frontend architectures to improve performance,scalability, and user experience.",
+            "Collaborated with cross-functionalteams and clients while leveraging Git, Agile SDLC, debugging,testing, Docker, and GitHub Actions-based CI/CD workflows to enable scalable application delivery and seamless zero-downtime deployments.",
+        ],
+        techStack: ["Next.js", "React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "Git", "GitHub Actions", "Docker"],
+        // achievement: "Awwwards Nominated"
+    },
+    {
+        id: 3,
         role: "Frontend Developer",
         company: "BITS2BYTES Techfest 2025 & IMPULSE Cultural Fest 2025",
         location: "Remote",

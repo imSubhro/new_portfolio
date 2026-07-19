@@ -1,16 +1,216 @@
 
-import { FaPlay } from 'react-icons/fa';
-import more from '../../assets/image/button.png';
+// import { FaPlay } from 'react-icons/fa';
+// import more from '../../assets/image/button.png';
+// import { BsGithub } from "react-icons/bs";
+// import { MdOutlineScreenShare } from "react-icons/md";
+
+
+// // Project data embedded in the same file
+// const projectsData = [
+//     {
+//         id: 1,
+//         name: "KHELRATNA",
+//         description: "Developed a Microservices based Cricket Scoring App with Next.js and FastAPI, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 300+ active users across 40+ live match  .",
+//         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
+//         code: "https://github.com/khelratna",
+//         demo: "https://play.google.com/store/apps/details?id=com.khelratna.app&pcampaignid=web_share",
+//         tools: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
+//         role: "Full Stack Developer"
+//     },
+//     {
+//         id: 2,
+//         name: "StreamSphere",
+//         description: "A Real-time Meeting Platform, designed and developed an end-to-end real-time streaming solution with live video, interactive chat, and session management, enabling low-latency communication for concurrent users.",
+//         tags: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
+//         code: "https://github.com/imSubhro/StreamSphere",
+//         demo: "https://streamsphere-iota.vercel.app/",
+//         tools: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
+//         role: "Lead Developer"
+//     },
+//     // {
+//     //     id: 3,
+//     //     name: "Daily Todos",
+//     //     description: "A sleek & responsive Todo app built with React, Redux Toolkit, & Tailwind CSS for efficient task management. It allows users to create, update, and delete tasks with ease, ensuring a smooth user experience.",
+//     //     tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
+//     //     code: "https://github.com/imSubhro/Todo",
+//     //     demo: "https://todo-indol-seven-66.vercel.app/",
+//     //     tools: ["Javascript", "React.js", "Redux Toolkit", "HTML", "Tailwind CSS", "API"],
+//     //     role: "Lead Developer"
+//     // },
+//     // {
+//     //     id: 3,
+//     //     name: "SylloGenie",
+//     //     description: "SylloGenie is a smart Flask-based web application that allows users to upload their syllabus PDFs and generates a concise, summarized PDF effortlessly. 🚀",
+//     //     tags: ["Vue.js", "Firebase", "CSS"],
+//     //     code: "https://github.com/imSubhro/SylloGenie",
+//     //     demo: "https://pdfsummary-uwt7.onrender.com/",
+//     //     tools: ["Python", "HTML", "Tailwind CSS"],
+//     //     role: "Lead Developer"
+//     // },
+//     {
+//         id: 4,
+//         name: "ByPass CTF",
+//         description: "ByPass CTF is a Capture The Flag (CTF) platform designed for cybersecurity enthusiasts to practice their skills. It offers a variety of challenges in different categories, including web exploitation, reverse engineering.",
+//         tags: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
+//         code: "https://github.com/imSubhro/BypassCTF",
+//         demo: "https:/bypassctf.vercel.app",
+//         tools: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
+//         role: "Backend Developer"
+//     },
+//     {
+//         id: 5,
+//         name: "BlogApp",
+//         description: "A modern Laravel blog platform empowering users to write, manage, and track their posts seamlessly. Featuring user authentication, rich text editing, and analytics for an enhanced blogging experience.",
+//         tags: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
+//         code: "https://github.com/imSubhro/BlogApp",
+//         demo: "https://blogapp-qe03.onrender.com/",
+//         tools: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
+//         role: "Lead Developer"
+//     },
+
+// ];
+
+// // SingleProject component
+// const SingleProject = ({ project }) => {
+//     const { name, description, tags, code, demo, tools, role } = project;
+//     return (
+//         <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020]  rounded-lg border border-[#D3D3D3]'>
+//             <div className='flex flex-col items-center justify-between w-full h-full '>
+
+//                 <div className="flex items-center w-full relative mb-2">
+//                     {/* Left corner dots */}
+//                     <div className="flex flex-row space-x-1 absolute left-5">
+//                         <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-500"></div>
+//                         <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-yellow-500"></div>
+//                         <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-500"></div>
+//                     </div>
+
+//                     {/* Centered name */}
+//                     <h2 className='text-[#EFF3F4] font-technor font-[700] text-base sm:text-lg md:text-xl lg:text-2xl leading-[110%] capitalize mb-2 mx-auto'>
+//                         {name}
+//                     </h2>
+//                 </div>
+
+
+
+//                 <div className="bg-background py-5 pl-6  border-t  border-orange-500 ">
+
+//                     <div className="blink">
+//                         <span className="mr-2 text-white font-technor font-[600]">const</span>
+//                         <span className="mr-2 text-orange-400 font-technor font-[600] ">project</span>
+//                         <span className="mr-2 text-white font-technor font-[600]">=</span>
+//                         <span className="text-gray-200 font-technor font-[600]">{'{'}</span>
+//                     </div>
+//                     <div className="w-full px-4 py-3 flex flex-col gap-2">
+//                         <p className="text-[#EFF3F4] font-supreme font-[600] text-xs sm:text-sm md:text-base">
+//                             <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">myRole:</span> {role}
+//                         </p>
+
+//                         <div>
+//                             <p className="text-orange-400 text-xs sm:text-sm md:text-base font-technor font-[600] mb-1.5 underline underline-offset-2">
+//                                 Tech Stack:
+//                             </p>
+//                             <div className="flex flex-wrap gap-2">
+//                                 {tools.map((tool, idx) => (
+//                                     <span
+//                                         key={idx}
+//                                         className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs font-supreme font-[600]"
+//                                     >
+//                                         {tool}
+//                                     </span>
+//                                 ))}
+//                             </div>
+//                         </div>
+
+//                         <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2 font-supreme font-[600]">
+//                             <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">Description:</span> {description}
+//                         </p>
+//                         <div><span className="text-gray-200 font-technor font-[600]">{`};`}</span></div>
+//                     </div>
+//                 </div>
+
+
+
+//                 <div className="flex items-center justify-between w-full mt-4 px-4">
+//                     <a
+//                         href={demo}
+//                         target='_blank'
+//                         rel="noreferrer"
+//                         className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 group hover:text-orange-600 hover:border-orange-600 hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
+//                         <MdOutlineScreenShare className="text-xs sm:text-sm md:text-base" />
+//                     </a>
+
+//                     <a
+//                         href={code}
+//                         target='_blank'
+//                         rel="noreferrer"
+//                         className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:text-orange-600 hover:border-orange-600 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30 group cursor-pointer no-underline delay-[0.3s]">
+//                         <BsGithub className="text-xs sm:text-sm md:text-base" />
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// // Main Projects component
+// const Projects = () => {
+//     return (
+//         <div id='projects' className="relative z-50 my-8 sm:my-10 md:my-12 lg:my-24 px-4 sm:px-6 md:px-8 lg:px-12">
+//             <div className="sticky top-6 sm:top-8 md:top-10">
+//                 <div className="flex items-center justify-start relative">
+//                     <span className="font-technor bg-gradient-to-r from-orange-500 to-red-600 absolute left-0 w-fit text-white px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 text-base sm:text-lg md:text-xl rounded-md">
+//                         PROJECTS
+//                     </span>
+//                     <span className="w-full h-[2.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent "></span>
+//                 </div>
+//             </div>
+//             <div className="pt-12 sm:pt-16 md:pt-20 lg:pt-24">
+//                 <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
+//                     {projectsData.map((project, index) => (
+//                         <div
+//                             id={`sticky-card-${index + 1}`}
+//                             key={index}
+//                             className="sticky-card w-full mx-auto max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl sticky"
+//                             style={{ top: `${60 + index * 20}px` }}
+//                         >
+//                             <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+//                                 <SingleProject project={project} />
+//                             </div>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+
+
+
+
+//         </div>
+//     );
+// };
+
+// export default Projects;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineScreenShare } from "react-icons/md";
-
 
 // Project data embedded in the same file
 const projectsData = [
     {
         id: 1,
         name: "KHELRATNA",
-        description: "Developed a Microservices based Cricket Scoring App with Next.js and FastAPI, with Match real-time scoreboard, Admin panel,live streaming, Players stats featuers scaled to 300+ active users across 40+ live match  .",
+        image: "../src/assets/image/khelratna.png", // 👈 add a screenshot per project
+        description: "Developed a Microservices based Cricket Scoring App with Next.js and FastAPI, with Match real-time scoreboard, Admin panel, live streaming, Players stats featuers scaled to 300+ active users across 40+ live match.",
         tags: ["Python", "Next.js", "Supabase", "PostgreSQL", "FastAPI", "Tailwind CSS", "JWT"],
         code: "https://github.com/khelratna",
         demo: "https://play.google.com/store/apps/details?id=com.khelratna.app&pcampaignid=web_share",
@@ -20,6 +220,7 @@ const projectsData = [
     {
         id: 2,
         name: "StreamSphere",
+        image: "../src/assets/image/stream.png",
         description: "A Real-time Meeting Platform, designed and developed an end-to-end real-time streaming solution with live video, interactive chat, and session management, enabling low-latency communication for concurrent users.",
         tags: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
         code: "https://github.com/imSubhro/StreamSphere",
@@ -27,29 +228,10 @@ const projectsData = [
         tools: ["Express.js", "Next.js", "socket.io", "WebRTC", "Javascript", "Docker"],
         role: "Lead Developer"
     },
-    // {
-    //     id: 3,
-    //     name: "Daily Todos",
-    //     description: "A sleek & responsive Todo app built with React, Redux Toolkit, & Tailwind CSS for efficient task management. It allows users to create, update, and delete tasks with ease, ensuring a smooth user experience.",
-    //     tags: ["Javascript", "HTML", "Tailwind CSS", "API"],
-    //     code: "https://github.com/imSubhro/Todo",
-    //     demo: "https://todo-indol-seven-66.vercel.app/",
-    //     tools: ["Javascript", "React.js", "Redux Toolkit", "HTML", "Tailwind CSS", "API"],
-    //     role: "Lead Developer"
-    // },
-    // {
-    //     id: 3,
-    //     name: "SylloGenie",
-    //     description: "SylloGenie is a smart Flask-based web application that allows users to upload their syllabus PDFs and generates a concise, summarized PDF effortlessly. 🚀",
-    //     tags: ["Vue.js", "Firebase", "CSS"],
-    //     code: "https://github.com/imSubhro/SylloGenie",
-    //     demo: "https://pdfsummary-uwt7.onrender.com/",
-    //     tools: ["Python", "HTML", "Tailwind CSS"],
-    //     role: "Lead Developer"
-    // },
     {
         id: 4,
         name: "ByPass CTF",
+        image: "../src/assets/image/bypassctf.png",
         description: "ByPass CTF is a Capture The Flag (CTF) platform designed for cybersecurity enthusiasts to practice their skills. It offers a variety of challenges in different categories, including web exploitation, reverse engineering.",
         tags: ["Next.js", "Python", "FastAPI", "Docker", "JavaScript"],
         code: "https://github.com/imSubhro/BypassCTF",
@@ -60,6 +242,7 @@ const projectsData = [
     {
         id: 5,
         name: "BlogApp",
+        image: "/assets/image/blogapp.png",
         description: "A modern Laravel blog platform empowering users to write, manage, and track their posts seamlessly. Featuring user authentication, rich text editing, and analytics for an enhanced blogging experience.",
         tags: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
         code: "https://github.com/imSubhro/BlogApp",
@@ -67,86 +250,95 @@ const projectsData = [
         tools: ["PHP", "Laravel", "Blade", "PostgreSQL", "Tailwind CSS", "Docker"],
         role: "Lead Developer"
     },
-
 ];
 
 // SingleProject component
 const SingleProject = ({ project }) => {
-    const { name, description, tags, code, demo, tools, role } = project;
+    const { name, image, description, code, demo, tools, role } = project;
+
     return (
-        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 py-6 bg-[#202020]  rounded-lg border border-[#D3D3D3]'>
-            <div className='flex flex-col items-center justify-between w-full h-full '>
+        <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden bg-[#202020] rounded-lg border border-[#D3D3D3]'>
 
-                <div className="flex items-center w-full relative mb-2">
-                    {/* Left corner dots */}
-                    <div className="flex flex-row space-x-1 absolute left-5">
-                        <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-500"></div>
-                        <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-yellow-500"></div>
-                        <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-500"></div>
+            {/* IMAGE / BROWSER-CHROME HEADER */}
+            <div className="relative w-full">
+                {/* fake browser bar sitting on top of the image */}
+                <div className="absolute top-0 left-0 w-full flex items-center px-4 py-2 bg-black/40 backdrop-blur-sm z-10">
+                    <div className="flex flex-row space-x-1.5">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
                     </div>
-
-                    {/* Centered name */}
-                    <h2 className='text-[#EFF3F4] font-technor font-[700] text-base sm:text-lg md:text-xl lg:text-2xl leading-[110%] capitalize mb-2 mx-auto'>
-                        {name}
-                    </h2>
+                    <span className="mx-auto pr-6 text-[#EFF3F4]/70 font-technor text-xs sm:text-sm">
+                        {name.toLowerCase()}.dev
+                    </span>
                 </div>
 
+                {/* screenshot */}
+                <img
+                    src={image}
+                    alt={`${name} preview`}
+                    className="w-full h-44 sm:h-52 md:h-60 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
 
+                {/* hover scrim with action icons */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100">
 
-                <div className="bg-background py-5 pl-6  border-t  border-orange-500 ">
+                        <a href={demo}
+                            target='_blank'
+                            rel="noreferrer"
+                            className="flex justify-center items-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 hover:text-orange-500 hover:border-orange-500 hover:scale-110 -translate-y-2 group-hover:translate-y-0"
+                        >
+                            <MdOutlineScreenShare className="text-base sm:text-lg" />
+                        </a>
 
-                    <div className="blink">
-                        <span className="mr-2 text-white font-technor font-[600]">const</span>
-                        <span className="mr-2 text-orange-400 font-technor font-[600] ">project</span>
-                        <span className="mr-2 text-white font-technor font-[600]">=</span>
-                        <span className="text-gray-200 font-technor font-[600]">{'{'}</span>
-                    </div>
-                    <div className="w-full px-4 py-3 flex flex-col gap-2">
-                        <p className="text-[#EFF3F4] font-supreme font-[600] text-xs sm:text-sm md:text-base">
-                            <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">myRole:</span> {role}
+                        <a href={code}
+                            target='_blank'
+                            rel="noreferrer"
+                            className="flex justify-center items-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 hover:text-orange-500 hover:border-orange-500 hover:scale-110 translate-y-2 group-hover:translate-y-0"
+                        >
+                            <BsGithub className="text-base sm:text-lg" />
+                        </a>
+                </div>
+            </div>
+
+            {/* NAME */}
+            <h2 className='text-[#EFF3F4] font-technor font-[700] text-base sm:text-lg md:text-xl lg:text-2xl leading-[110%] capitalize mt-4 mb-1 text-center px-3'>
+                {name}
+            </h2>
+
+            {/* CODE-BLOCK DETAILS */}
+            <div className="w-full bg-background py-5 pl-6 border-t border-orange-500">
+                <div className="blink">
+                    <span className="mr-2 text-white font-technor font-[600]">const</span>
+                    <span className="mr-2 text-orange-400 font-technor font-[600]">project</span>
+                    <span className="mr-2 text-white font-technor font-[600]">=</span>
+                    <span className="text-gray-200 font-technor font-[600]">{'{'}</span>
+                </div>
+                <div className="w-full px-4 py-3 flex flex-col gap-2">
+                    <p className="text-[#EFF3F4] font-supreme font-[600] text-xs sm:text-sm md:text-base">
+                        <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">myRole:</span> {role}
+                    </p>
+
+                    <div>
+                        <p className="text-orange-400 text-xs sm:text-sm md:text-base font-technor font-[600] mb-1.5 underline underline-offset-2">
+                            Tech Stack:
                         </p>
-
-                        <div>
-                            <p className="text-orange-400 text-xs sm:text-sm md:text-base font-technor font-[600] mb-1.5 underline underline-offset-2">
-                                Tech Stack:
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                {tools.map((tool, idx) => (
-                                    <span
-                                        key={idx}
-                                        className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs font-supreme font-[600]"
-                                    >
-                                        {tool}
-                                    </span>
-                                ))}
-                            </div>
+                        <div className="flex flex-wrap gap-2">
+                            {tools.map((tool, idx) => (
+                                <span
+                                    key={idx}
+                                    className="bg-orange-500 text-[#EFF3F4] px-2 py-1 rounded-md text-xs font-supreme font-[600]"
+                                >
+                                    {tool}
+                                </span>
+                            ))}
                         </div>
-
-                        <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2 font-supreme font-[600]">
-                            <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">Description:</span> {description}
-                        </p>
-                        <div><span className="text-gray-200 font-technor font-[600]">{`};`}</span></div>
                     </div>
-                </div>
 
-
-
-                <div className="flex items-center justify-between w-full mt-4 px-4">
-                    <a
-                        href={demo}
-                        target='_blank'
-                        rel="noreferrer"
-                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 group hover:text-orange-600 hover:border-orange-600 hover:scale-110 decoration-clone cursor-pointer no-underline delay-[0.3s]">
-                        <MdOutlineScreenShare className="text-xs sm:text-sm md:text-base" />
-                    </a>
-
-                    <a
-                        href={code}
-                        target='_blank'
-                        rel="noreferrer"
-                        className="flex justify-center items-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:text-orange-600 hover:border-orange-600 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30 group cursor-pointer no-underline delay-[0.3s]">
-                        <BsGithub className="text-xs sm:text-sm md:text-base" />
-                    </a>
+                    <p className="text-[#EFF3F4] text-xs sm:text-sm md:text-base mt-2 font-supreme font-[600]">
+                        <span className="font-technor font-[600] text-orange-400 underline underline-offset-2">Description:</span> {description}
+                    </p>
+                    <div><span className="text-gray-200 font-technor font-[600]">{`};`}</span></div>
                 </div>
             </div>
         </div>
@@ -181,10 +373,6 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-
-
-
-
         </div>
     );
 };

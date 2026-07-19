@@ -12,8 +12,7 @@ import Contact from "./components/Contact/contact.jsx";
 import ScrollTop from "./components/Scrolltop/scroll.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Intro from "./components/Intro/intro.jsx";
-import BlobCursor from "./components/BlobCursor.jsx";
-// import Ribbons from "./components/home/Ribbons.jsx";
+import Ribbons from "./components/Ribbons.jsx";
 
 
 const MainContain = () => {
@@ -35,9 +34,17 @@ const MainContain = () => {
 function App() {
   return (
     <Router>
-      {/* Global BlobCursor for entire website */}
-      <BlobCursor />
-      {/* <Ribbons /> */}
+      <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 9999 }}>
+        <Ribbons
+          colors={["#FF7127"]}
+          baseThickness={80}
+          speedMultiplier={0.6}
+          maxAge={600}
+          pointCount={60}
+          enableFade={false}
+          enableShaderEffect={false}
+        />
+      </div>
       <Navbar />
       <Routes>
         <Route path="/" element={<MainContain />} />

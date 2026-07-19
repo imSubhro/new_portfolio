@@ -5,12 +5,10 @@ import { FaGithub } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram, FaWordpress } from "react-icons/fa";
-import { FaFileAlt } from "react-icons/fa"; // Added for resume icon
+import { FaFileAlt } from "react-icons/fa";
 import LightRays from '../LightRays';
-import BlobCursor from '../BlobCursor';
-// import Ribbons from '../../ribbon';
 
-// Add document head for favicon
+import DecryptedText from '../DecryptedText';
 import { Helmet } from "react-helmet";
 
 export default function home() {
@@ -27,7 +25,7 @@ export default function home() {
   const [resumeVisible, setResumeVisible] = useState(false);
 
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1kanQNVA0J0skCEU64dplOE_u4JtFtblK/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1uVO5czKQiNEdN06Nw535xBT2UcskK_WF/view?usp=sharing", "_blank");
   };
 
   useEffect(() => {
@@ -64,24 +62,6 @@ export default function home() {
   return (
     <>
 
-      <BlobCursor
-        blobType="circle"
-        fillColor="#FF7127"
-        trailCount={3}
-        sizes={[60, 125, 75]}
-        innerSizes={[20, 35, 25]}
-        innerColor="rgba(255,255,255,0.8)"
-        opacities={[0.6, 0.6, 0.6]}
-        shadowColor="rgba(0,0,0,0.75)"
-        shadowBlur={5}
-        shadowOffsetX={10}
-        shadowOffsetY={10}
-        filterStdDeviation={30}
-        useFilter={true}
-        fastDuration={0.1}
-        slowDuration={0.5}
-        zIndex={100}
-      />
 
 
 
@@ -111,7 +91,13 @@ export default function home() {
           {/* Content column */}
           <div className="flex flex-col justify-center items-center lg:items-start order-2 lg:order-1 px-2 sm:px-4 text-center lg:text-left">
             <h1 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-technor font-[700] text-gray-300 leading-tight">
-              Hello There! Subhro Here!
+              <DecryptedText
+                text="Hello There! Subhro Here!"
+                animateOn="inViewHover"
+                revealDirection="start"
+                speed={60}
+                maxIterations={10}
+              />
             </h1>
 
             {/* Typing effect text */}
